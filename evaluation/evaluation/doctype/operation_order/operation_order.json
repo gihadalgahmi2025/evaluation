@@ -1,0 +1,285 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-07-03 00:00:00",
+ "description": "Enemy operation you are tracking. Link Daily Activities to its tasks instead of typing task codes.",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "operation_name",
+  "commanding_unit",
+  "end_datetime",
+  "evaluation_unit",
+  "amended_from",
+  "column_break_apjm",
+  "operation_type",
+  "start_datetime",
+  "status",
+  "workflow_state",
+  "section_break_yosg",
+  "objective",
+  "concept_of_ops",
+  "column_break_ynlg",
+  "commander_intent",
+  "section_break_lmlm",
+  "phases",
+  "tasks",
+  "column_break_liyz",
+  "assigned_forces",
+  "linked_targets"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "OPORD-.YYYY.-"
+  },
+  {
+   "fieldname": "operation_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Operation Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "operation_type",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Operation Type",
+   "options": "\nOffensive\nDefensive\nTransition\nStabilization\nReconnaissance"
+  },
+  {
+   "fieldname": "commanding_unit",
+   "fieldtype": "Link",
+   "label": "Observed Enemy Command",
+   "options": "Force Arrangement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Start Datetime"
+  },
+  {
+   "fieldname": "end_datetime",
+   "fieldtype": "Datetime",
+   "label": "End Datetime"
+  },
+  {
+   "default": "Planned",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nPlanned\nApproved\nActive\nCompleted\nCancelled\nDeferred"
+  },
+  {
+   "fieldname": "objective",
+   "fieldtype": "Text Editor",
+   "label": "Objective (Mission)"
+  },
+  {
+   "fieldname": "commander_intent",
+   "fieldtype": "Text Editor",
+   "label": "Commander Intent"
+  },
+  {
+   "fieldname": "concept_of_ops",
+   "fieldtype": "Text Editor",
+   "label": "Concept of Operations"
+  },
+  {
+   "fieldname": "phases",
+   "fieldtype": "Table",
+   "label": "Phases",
+   "options": "Operation Phase"
+  },
+  {
+   "fieldname": "tasks",
+   "fieldtype": "Table",
+   "label": "Tasks",
+   "options": "Operation Task"
+  },
+  {
+   "fieldname": "assigned_forces",
+   "fieldtype": "Table",
+   "label": "Assigned Enemy Units",
+   "options": "Operation Force Assignment"
+  },
+  {
+   "fieldname": "linked_targets",
+   "fieldtype": "Table",
+   "label": "Linked Targets",
+   "options": "Operation Target Link"
+  },
+  {
+   "fetch_from": "commanding_unit.evaluation_unit",
+   "fetch_if_empty": 1,
+   "fieldname": "evaluation_unit",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Evaluation Unit",
+   "options": "Evaluation Unit",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Workflow State",
+   "options": "Workflow State",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Operation Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_apjm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_yosg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ynlg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_lmlm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_liyz",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "is_calendar_and_gantt": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Observations",
+   "link_doctype": "Daily Activities",
+   "link_fieldname": "operation_order"
+  },
+  {
+   "group": "Targets",
+   "link_doctype": "Target",
+   "link_fieldname": "operation_order"
+  },
+  {
+   "group": "Forces",
+   "link_doctype": "Force Arrangement",
+   "link_fieldname": "force_arrangement",
+   "parent_doctype": "Operation Order",
+   "table_fieldname": "assigned_forces"
+  }
+ ],
+ "modified": "2026-10-12 01:15:19.939972",
+ "modified_by": "Administrator",
+ "module": "Evaluation",
+ "name": "Operation Order",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation",
+   "share": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Commander",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Ops Officer",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "operation_name, operation_type , status",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

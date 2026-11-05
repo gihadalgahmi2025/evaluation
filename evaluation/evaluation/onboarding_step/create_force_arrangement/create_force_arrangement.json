@@ -1,0 +1,21 @@
+{
+ "creation": "2026-08-04 00:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2026-08-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "show_form_tour": 1,
+ "show_full_form": 1,
+ "validate_action": 1,
+ "name": "Create Force Arrangement",
+ "title": "Create Force Arrangement",
+ "action": "Create Entry",
+ "action_label": "Create Force Arrangement",
+ "reference_document": "Force Arrangement",
+ "form_tour": "Force Arrangement Form Tour"
+}

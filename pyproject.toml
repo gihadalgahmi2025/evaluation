@@ -1,0 +1,23 @@
+[project]
+name = "evaluation"
+authors = [
+    { name = "Aljahmi", email = "gihadalgahmi@gmail.com"}
+]
+description = "Enemy reconnaissance: order of battle, daily observations, targets, and situation"
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = [
+    # Frappe is the bench framework, not a pip dependency of this app.
+]
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+# These dependencies are only installed when developer mode is enabled
+[tool.flit.module]
+name = "evaluation"
+
+[tool.bench.dev-dependencies]
+# package_name = "~=1.1.0"

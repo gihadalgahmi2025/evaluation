@@ -1,0 +1,160 @@
+{
+ "actions": [],
+ "autoname": "field:posture_name",
+ "creation": "2026-07-03 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "posture_name",
+  "posture_name_ar",
+  "affects_readiness",
+  "readiness_modifier",
+  "default_spread_type",
+  "map_color",
+  "symbol_code",
+  "sort_order",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "posture_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Posture Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "posture_name_ar",
+   "fieldtype": "Data",
+   "label": "Posture Name (Arabic)"
+  },
+  {
+   "default": "0",
+   "fieldname": "affects_readiness",
+   "fieldtype": "Check",
+   "label": "Affects Readiness"
+  },
+  {
+   "fieldname": "readiness_modifier",
+   "fieldtype": "Percent",
+   "label": "Readiness Modifier"
+  },
+  {
+   "fieldname": "default_spread_type",
+   "fieldtype": "Select",
+   "label": "Default Spread Type",
+   "options": "\nGeographic\nTactic\nManagement",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "map_color",
+   "fieldtype": "Color",
+   "label": "Map Color"
+  },
+  {
+   "fieldname": "symbol_code",
+   "fieldtype": "Data",
+   "label": "Symbol Code"
+  },
+  {
+   "default": "0",
+   "fieldname": "sort_order",
+   "fieldtype": "Int",
+   "label": "Sort Order"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  }
+ ],
+ "links": [
+  {
+   "group": "Forces",
+   "link_doctype": "Force Arrangement",
+   "link_fieldname": "current_posture"
+  },
+  {
+   "group": "Observations",
+   "link_doctype": "Daily Activities",
+   "link_fieldname": "inferred_posture"
+  },
+  {
+   "group": "Observations",
+   "link_doctype": "Public Activity",
+   "link_fieldname": "infers_posture"
+  }
+ ],
+ "modified": "2026-08-26 17:15:00.000000",
+ "modified_by": "Administrator",
+ "module": "Evaluation",
+ "name": "Combat Posture",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Ops Officer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "posture_name",
+ "track_changes": 1
+}

@@ -1,0 +1,45 @@
+{
+ "actions": [],
+ "creation": "2026-07-03 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "module": "Evaluation",
+ "name": "Target Carver Line",
+ "owner": "Administrator",
+ "modified_by": "Administrator",
+ "modified": "2026-07-03 00:00:00",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "istable": 1,
+ "permissions": [],
+ "editable_grid": 1,
+ "field_order": [
+  "criterion",
+  "score",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "criterion",
+   "fieldtype": "Select",
+   "label": "Criterion",
+   "options": "\nCriticality\nAccessibility\nRecuperability\nVulnerability\nEffect\nRecognizability",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Int",
+   "label": "Score (1-5)",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ]
+}

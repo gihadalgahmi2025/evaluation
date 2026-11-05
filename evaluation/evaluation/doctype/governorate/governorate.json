@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:governorate_name",
+ "creation": "2024-04-05 10:04:38.590874",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "governorate_name"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "governorate_name",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Governorate Name",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Geography",
+   "link_doctype": "Governorate Directorate",
+   "link_fieldname": "governorate_name"
+  },
+  {
+   "group": "Targets",
+   "link_doctype": "Target",
+   "link_fieldname": "governorate"
+  },
+  {
+   "group": "Observations",
+   "link_doctype": "Daily Activities",
+   "link_fieldname": "governorate_name"
+  },
+  {
+   "group": "Intelligence",
+   "link_doctype": "Intel Report",
+   "link_fieldname": "governorate"
+  },
+  {
+   "group": "Personnel",
+   "link_doctype": "Personality",
+   "link_fieldname": "governorate_name"
+  }
+ ],
+ "modified": "2026-08-26 17:15:00.000000",
+ "modified_by": "Administrator",
+ "module": "Evaluation",
+ "name": "Governorate",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation User",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

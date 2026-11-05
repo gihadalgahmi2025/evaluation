@@ -1,0 +1,208 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2026-08-26 13:06:25.405424",
+ "description": "Enemy situation compiled from Daily Activities against Force Arrangement (enemy order of battle).",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "report_datetime",
+  "sector",
+  "overall_status",
+  "friendly_summary",
+  "enemy_summary",
+  "weather",
+  "snapshot_lines",
+  "linked_activities",
+  "map_snapshot_hash",
+  "evaluation_unit",
+  "workflow_state",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "SITREP-.YYYY.-"
+  },
+  {
+   "fieldname": "report_datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Report Datetime",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sector",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Observed Sector",
+   "options": "Force Arrangement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "overall_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Overall Status",
+   "options": "\nQuiet\nLimited Contact\nHeavy Contact\nCritical"
+  },
+  {
+   "fieldname": "friendly_summary",
+   "fieldtype": "Text Editor",
+   "label": "Collection Notes"
+  },
+  {
+   "fieldname": "enemy_summary",
+   "fieldtype": "Text Editor",
+   "label": "Enemy Summary"
+  },
+  {
+   "fieldname": "weather",
+   "fieldtype": "Small Text",
+   "label": "Weather"
+  },
+  {
+   "fieldname": "snapshot_lines",
+   "fieldtype": "Table",
+   "label": "Snapshot Lines",
+   "options": "Situation Snapshot Line"
+  },
+  {
+   "fieldname": "linked_activities",
+   "fieldtype": "Table",
+   "label": "Linked Activities",
+   "options": "Situation Activity Link"
+  },
+  {
+   "fieldname": "map_snapshot_hash",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Map Snapshot Hash",
+   "read_only": 1
+  },
+  {
+   "fieldname": "evaluation_unit",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Evaluation Unit",
+   "options": "Evaluation Unit",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Workflow State",
+   "options": "Workflow State",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Situation Report",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Observations",
+   "link_doctype": "Daily Activities",
+   "link_fieldname": "situation_report"
+  }
+ ],
+ "modified": "2026-08-26 17:15:00.000000",
+ "modified_by": "Administrator",
+ "module": "Evaluation",
+ "name": "Situation Report",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation",
+   "share": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Commander",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Ops Officer",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

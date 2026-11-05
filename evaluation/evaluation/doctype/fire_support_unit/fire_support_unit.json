@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-01 23:19:42.298028",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "fire_support_unit_type",
+  "unit_name",
+  "number",
+  "notes",
+  "standby_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "fire_support_unit_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fire Support Unit Type",
+   "options": "Fire Support Unit Type"
+  },
+  {
+   "fieldname": "unit_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Unit Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Number"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "standby_type",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Standby Type",
+   "options": "\nTank\nTrucks\nTroop Carriers\nRadar\nLaunchers\nMissile Platforms\nSelf-Propelled Guns\nGuided Missile Fists"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-01 23:25:07.899614",
+ "modified_by": "Administrator",
+ "module": "Evaluation",
+ "name": "Fire Support Unit",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

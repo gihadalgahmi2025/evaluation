@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "creation": "2026-07-03 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "module": "Evaluation",
+ "name": "Operation Target Link",
+ "owner": "Administrator",
+ "modified_by": "Administrator",
+ "modified": "2026-07-03 00:00:00",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "istable": 1,
+ "permissions": [],
+ "editable_grid": 1,
+ "field_order": [
+  "target",
+  "desired_effect",
+  "priority"
+ ],
+ "fields": [
+  {
+   "fieldname": "target",
+   "fieldtype": "Link",
+   "label": "Target",
+   "options": "Target",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "desired_effect",
+   "fieldtype": "Select",
+   "label": "Desired Effect",
+   "options": "\nDestroy\nNeutralize\nDisrupt\nDeceive",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "\nCritical\nHigh\nMedium\nLow"
+  }
+ ]
+}

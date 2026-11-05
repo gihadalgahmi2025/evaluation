@@ -1,0 +1,220 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ESC-{#####}",
+ "creation": "2026-08-03 00:00:00",
+ "description": "Weighted score of an enemy personality, chief, or unit. Title and period fill automatically if left blank.",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "score_card_title",
+  "evaluation_unit",
+  "subject_type",
+  "column_break_subj",
+  "personality",
+  "army_chief",
+  "force_arrangement",
+  "column_break_1",
+  "period_from",
+  "period_to",
+  "status",
+  "section_break_1",
+  "criteria_group",
+  "score_lines",
+  "section_break_2",
+  "total_score",
+  "rank",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "score_card_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Score Card Title",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "force_arrangement.evaluation_unit",
+   "fetch_if_empty": 1,
+   "fieldname": "evaluation_unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Evaluation Unit",
+   "options": "Evaluation Unit",
+   "reqd": 1
+  },
+  {
+   "default": "Personality",
+   "fieldname": "subject_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Subject Type",
+   "options": "Personality\nEvaluation Unit\nArmy Chief\nForce Arrangement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_subj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.subject_type=='Personality'",
+   "fieldname": "personality",
+   "fieldtype": "Link",
+   "label": "Personality",
+   "options": "Personality"
+  },
+  {
+   "depends_on": "eval:doc.subject_type=='Army Chief'",
+   "fieldname": "army_chief",
+   "fieldtype": "Link",
+   "label": "Army Chief",
+   "options": "Army Chief"
+  },
+  {
+   "depends_on": "eval:doc.subject_type=='Force Arrangement'",
+   "fieldname": "force_arrangement",
+   "fieldtype": "Link",
+   "label": "Force Arrangement",
+   "options": "Force Arrangement"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "period_from",
+   "fieldtype": "Date",
+   "label": "Period From"
+  },
+  {
+   "fieldname": "period_to",
+   "fieldtype": "Date",
+   "label": "Period To"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nReviewed\nApproved"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break",
+   "label": "Scoring"
+  },
+  {
+   "fieldname": "criteria_group",
+   "fieldtype": "Link",
+   "label": "Criteria Group",
+   "options": "Evaluation Criteria Group"
+  },
+  {
+   "fieldname": "score_lines",
+   "fieldtype": "Table",
+   "label": "Score Lines",
+   "options": "Evaluation Score Line",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rank",
+   "fieldtype": "Int",
+   "label": "Rank",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-27 16:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Evaluation",
+ "name": "Evaluation Score Card",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Intel Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Commander",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "score_card_title",
+ "track_changes": 1
+}
