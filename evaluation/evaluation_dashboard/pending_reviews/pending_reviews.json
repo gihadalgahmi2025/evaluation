@@ -1,0 +1,22 @@
+{
+ "description": "لوحة العدادات — عدد العناصر بانتظار المراجعة في مركز البيانات",
+ "doctype": "Dashboard",
+ "is_default": 0,
+ "is_standard": 1,
+ "layout": "dashboard",
+ "module": "Data Review Center",
+ "name": "Pending Reviews",
+ "title": "المراجعات المعلقة",
+ "charts": [
+  {
+   "chart_name": "Pending Reviews Count",
+   "width": "Half"
+  }
+ ],
+ "cards": [
+  {
+   "card_name": "Total Pending Reviews",
+   "width": "Full"
+  }
+ ]
+}

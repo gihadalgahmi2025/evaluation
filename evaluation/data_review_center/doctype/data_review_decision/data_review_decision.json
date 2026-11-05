@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "DRD-.YYYY.#####",
+ "creation": "2026-11-04 00:00:00.000000",
+ "description": "سجل القرارات المتخذة من قبل المراجعين على عناصر طابور المراجعة.",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "review_queue",
+  "item_type",
+  "entity_name",
+  "source_activity",
+  "proposed_value",
+  "decision",
+  "final_value",
+  "decided_by",
+  "decided_on",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "review_queue",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "عنصر المراجعة",
+   "options": "Data Review Queue",
+   "reqd": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "item_type",
+   "fieldtype": "Data",
+   "label": "نوع العنصر",
+   "read_only": 1
+  },
+  {
+   "fieldname": "entity_name",
+   "fieldtype": "Data",
+   "label": "اسم الكيان",
+   "read_only": 1
+  },
+  {
+   "fieldname": "source_activity",
+   "fieldtype": "Link",
+   "label": "النشاط المصدر",
+   "options": "Daily Activities",
+   "read_only": 1
+  },
+  {
+   "fieldname": "proposed_value",
+   "fieldtype": "Small Text",
+   "label": "القيمة المقترحة",
+   "read_only": 1
+  },
+  {
+   "fieldname": "decision",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "القرار",
+   "options": "\nApproved\nRejected\nMerged\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "final_value",
+   "fieldtype": "Small Text",
+   "label": "القيمة النهائية"
+  },
+  {
+   "fieldname": "decided_by",
+   "fieldtype": "Link",
+   "label": "تم اتخاذ القرار بواسطة",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "decided_on",
+   "fieldtype": "Datetime",
+   "label": "تاريخ القرار",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "ملاحظات"
+  }
+ ],
+ "istable": 0,
+ "links": [],
+ "modified": "2026-11-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Data Review Center",
+ "name": "Data Review Decision",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Intel Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Commander",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "read_only": 0,
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "decision",
+ "track_changes": 1
+}

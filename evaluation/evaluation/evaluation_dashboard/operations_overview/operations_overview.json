@@ -1,0 +1,42 @@
+{
+ "cards": [
+  {
+   "card": "Open Intel"
+  },
+  {
+   "card": "Operations Running"
+  },
+  {
+   "card": "Situation Reports"
+  },
+  {
+   "card": "Critical Threats"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Intel by Source",
+   "width": "Half"
+  },
+  {
+   "chart": "Threat Level Trend",
+   "width": "Half"
+  },
+  {
+   "chart": "Observation Trend",
+   "width": "Half"
+  }
+ ],
+ "creation": "2026-11-05 06:17:31.120192",
+ "dashboard_name": "Operations Overview",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2026-11-05 06:29:22.328106",
+ "modified_by": "Administrator",
+ "module": "Evaluation",
+ "name": "Operations Overview",
+ "owner": "Administrator"
+}

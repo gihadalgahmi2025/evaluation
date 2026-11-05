@@ -1,0 +1,23 @@
+{
+ "aggregate_function_based_on": "",
+ "creation": "2026-11-05 06:13:13.635130",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Target",
+ "filters_json": "[[\"Target\", \"no_strike\", \"=\", 1]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "No Strike",
+ "modified": "2026-11-05 06:29:22.422996",
+ "modified_by": "Administrator",
+ "module": "Evaluation",
+ "name": "No Strike",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_full_number": 0,
+ "show_percentage_stats": 0,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}

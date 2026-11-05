@@ -1,0 +1,203 @@
+{
+ "actions": [],
+ "allow_amend": 1,
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-07-03 00:00:00",
+ "description": "Personnel and equipment losses against an observed enemy unit.",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "report_datetime",
+  "force_arrangement",
+  "personnel_lines",
+  "equipment_lines",
+  "total_kia",
+  "total_wia",
+  "strength_pct_after",
+  "notes",
+  "evaluation_unit",
+  "workflow_state",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "CAS-.YYYY.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "CAS-.YYYY.#####"
+  },
+  {
+   "default": "Now",
+   "fieldname": "report_datetime",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Report Datetime",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "force_arrangement",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Observed Enemy Unit",
+   "options": "Force Arrangement",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "personnel_lines",
+   "fieldtype": "Table",
+   "label": "Personnel Casualties",
+   "options": "Casualty Personnel Line"
+  },
+  {
+   "fieldname": "equipment_lines",
+   "fieldtype": "Table",
+   "label": "Equipment Losses",
+   "options": "Casualty Equipment Line"
+  },
+  {
+   "fieldname": "total_kia",
+   "fieldtype": "Int",
+   "label": "Total KIA",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_wia",
+   "fieldtype": "Int",
+   "label": "Total WIA",
+   "read_only": 1
+  },
+  {
+   "fieldname": "strength_pct_after",
+   "fieldtype": "Percent",
+   "label": "Strength % After",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "evaluation_unit",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Evaluation Unit",
+   "options": "Evaluation Unit",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Workflow State",
+   "options": "Workflow State",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Casualty Report",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-08-27 16:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Operations",
+ "name": "Casualty Report",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation",
+   "share": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Commander",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Logistics Officer",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

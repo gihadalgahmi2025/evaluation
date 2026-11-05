@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "EMC-.YYYY.#####",
+ "creation": "2026-11-04 00:00:00.000000",
+ "description": "مرشحات المطابقة المحتملة للكيانات المستخرجة من الأنشطة، تُعرض على المستخدم للاختيار أو التأكيد على عدم المطابقة.",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "source_activity",
+  "entity_type",
+  "extracted_value",
+  "matched_doctype",
+  "matched_name",
+  "score",
+  "status",
+  "reviewed_by",
+  "reviewed_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "source_activity",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "النشاط المصدر",
+   "options": "Daily Activities",
+   "reqd": 1
+  },
+  {
+   "fieldname": "entity_type",
+   "fieldtype": "Select",
+   "label": "نوع الكيان",
+   "options": "\nPersonality\nLocation\nForce Unit\nOrganization",
+   "reqd": 1
+  },
+  {
+   "fieldname": "extracted_value",
+   "fieldtype": "Data",
+   "label": "القيمة المستخرجة",
+   "reqd": 1
+  },
+  {
+   "fieldname": "matched_doctype",
+   "fieldtype": "Data",
+   "label": "نوع السجل المطابق"
+  },
+  {
+   "fieldname": "matched_name",
+   "fieldtype": "Dynamic Link",
+   "label": "السجل المطابق",
+   "options": "matched_doctype"
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Percent",
+   "label": "درجة التطابق"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "الحالة",
+   "options": "\nPending\nAccepted\nRejected\nNo Match",
+   "default": "Pending"
+  },
+  {
+   "fieldname": "reviewed_by",
+   "fieldtype": "Link",
+   "label": "تم المراجعة بواسطة",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reviewed_on",
+   "fieldtype": "Datetime",
+   "label": "تاريخ المراجعة",
+   "read_only": 1
+  }
+ ],
+ "istable": 0,
+ "links": [],
+ "modified": "2026-11-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Data Review Center",
+ "name": "Entity Match Candidate",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Intel Officer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "read_only": 0,
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "extracted_value",
+ "track_changes": 1
+}

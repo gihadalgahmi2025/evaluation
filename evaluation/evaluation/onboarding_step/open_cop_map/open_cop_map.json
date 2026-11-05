@@ -1,0 +1,22 @@
+{
+ "creation": "2026-08-04 00:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 0,
+ "is_skipped": 0,
+ "modified": "2026-08-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "validate_action": 1,
+ "name": "Open COP Map",
+ "title": "Open COP Map",
+ "action": "Go to Page",
+ "action_label": "Open COP Map",
+ "path": "cop",
+ "callback_title": "Common Operational Picture",
+ "callback_message": "Explore the COP map, then continue onboarding from the sidebar."
+}

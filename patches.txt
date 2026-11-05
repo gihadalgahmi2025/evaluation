@@ -1,0 +1,6 @@
+# Evaluation app patches
+# Format: module.path.function  (comma separated per line for same module)
+
+evaluation.patches.v0_1.normalize_naming_series
+evaluation.patches.v0_1.set_evaluation_unit_scope
+evaluation.patches.v0_1.remove_legacy_fields

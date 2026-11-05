@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2024-04-05 06:09:43.400850",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "latitude",
+  "longitude",
+  "name_road",
+  "governorate_name",
+  "directorate_name",
+  "category"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_road",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name Road"
+  },
+  {
+   "fetch_from": "directorate_name.governorate_name",
+   "fieldname": "governorate_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Governorate Name",
+   "options": "Governorate",
+   "search_index": 1
+  },
+  {
+   "fieldname": "directorate_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Directorate Name",
+   "options": "Governorate Directorate",
+   "search_index": 1
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Latitude"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Longitude"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Category"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-06-04 00:59:07.955302",
+ "modified_by": "Administrator",
+ "module": "Reconnaissance",
+ "name": "Movement Method",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

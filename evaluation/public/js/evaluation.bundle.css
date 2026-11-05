@@ -1,0 +1,37 @@
+/* Evaluation app styling */
+:root {
+	--eval-critical: #d32f2f;
+	--eval-high: #f57c00;
+	--eval-medium: #fbc02d;
+	--eval-low: #1976d2;
+	--eval-ok: #388e3c;
+}
+
+.indicator-pill.Critical { background-color: var(--eval-critical); color: #fff; }
+.indicator-pill.High     { background-color: var(--eval-high); color: #fff; }
+.indicator-pill.Medium   { background-color: var(--eval-medium); color: #212121; }
+.indicator-pill.Low      { background-color: var(--eval-low); color: #fff; }
+
+.eval-dashboard-card {
+	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius);
+	padding: 12px 16px;
+	margin-bottom: 12px;
+	background: var(--card-bg);
+}
+.eval-dashboard-card .value { font-size: 1.6rem; font-weight: 600; }
+.eval-dashboard-card .label { color: var(--text-muted); font-size: 0.85rem; }
+
+.eval-strength-bar {
+	height: 8px;
+	border-radius: 4px;
+	background: var(--control-bg);
+	overflow: hidden;
+}
+.eval-strength-bar > span {
+	display: block;
+	height: 100%;
+	background: var(--eval-ok);
+}
+.eval-strength-bar.warn > span { background: var(--eval-medium); }
+.eval-strength-bar.critical > span { background: var(--eval-critical); }

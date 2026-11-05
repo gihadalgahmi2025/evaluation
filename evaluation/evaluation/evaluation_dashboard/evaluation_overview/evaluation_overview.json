@@ -1,0 +1,35 @@
+{
+ "cards": [
+  {
+   "card": "Evaluation Units"
+  },
+  {
+   "card": "Score Cards"
+  },
+  {
+   "card": "Average Score"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Evaluation Score Trend",
+   "width": "Half"
+  },
+  {
+   "chart": "Score Cards by Unit",
+   "width": "Half"
+  }
+ ],
+ "creation": "2026-11-05 06:13:20.845569",
+ "dashboard_name": "Evaluation Overview",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2026-11-05 06:29:22.315534",
+ "modified_by": "Administrator",
+ "module": "Evaluation",
+ "name": "Evaluation Overview",
+ "owner": "Administrator"
+}

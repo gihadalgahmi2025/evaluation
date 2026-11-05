@@ -1,0 +1,178 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "DCL-.YYYY.#####",
+ "creation": "2026-11-04 00:00:00.000000",
+ "description": "سجل تدقيق غير قابل للحذف لكل عملية تكامل بين الأنشطة اليومية والسجلات المركزية (الأفراد، التشكيلات، المواقع).",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "entity_type",
+  "entity_name",
+  "action",
+  "source_activity",
+  "source_doctype",
+  "source_name",
+  "old_value",
+  "new_value",
+  "changed_by",
+  "decision",
+  "notes",
+  "timestamp"
+ ],
+ "fields": [
+  {
+   "fieldname": "entity_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "نوع الكيان",
+   "options": "\nPersonality\nLocation\nForce Unit\nOrganization\nEvent\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "entity_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "اسم الكيان",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "action",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "الإجراء",
+   "options": "\ncreated_pending\nlinked\nqueued_for_review\nreview_approved\nreview_rejected\nreview_merged\nreview_archived\nupdated",
+   "reqd": 1
+  },
+  {
+   "fieldname": "source_activity",
+   "fieldtype": "Link",
+   "label": "النشاط المصدر",
+   "options": "Daily Activities"
+  },
+  {
+   "fieldname": "source_doctype",
+   "fieldtype": "Data",
+   "label": "نوع dokument المصدر"
+  },
+  {
+   "fieldname": "source_name",
+   "fieldtype": "Data",
+   "label": "اسم dokument المصدر"
+  },
+  {
+   "fieldname": "old_value",
+   "fieldtype": "Small Text",
+   "label": "القيمة السابقة"
+  },
+  {
+   "fieldname": "new_value",
+   "fieldtype": "Small Text",
+   "label": "القيمة الجديدة"
+  },
+  {
+   "fieldname": "changed_by",
+   "fieldtype": "Link",
+   "label": "تم التغيير بواسطة",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "decision",
+   "fieldtype": "Select",
+   "label": "قرار الاعتماد",
+   "options": "\nApproved\nRejected\nMerged\nArchived\nPending"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "ملاحظات"
+  },
+  {
+   "fieldname": "timestamp",
+   "fieldtype": "Datetime",
+   "label": "ال timestamp",
+   "read_only": 1
+  }
+ ],
+ "istable": 0,
+ "links": [],
+ "modified": "2026-11-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Data Review Center",
+ "name": "Data Change Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation User",
+   "share": 1,
+   "write": 0
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Intel Officer",
+   "share": 1,
+   "write": 0
+  },
+  {
+   "create": 0,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Commander",
+   "share": 1,
+   "write": 0
+  }
+ ],
+ "quick_entry": 1,
+ "read_only": 0,
+ "row_format": "Dynamic",
+ "show_name_in_global_search": 1,
+ "sort_field": "timestamp",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "action",
+ "track_changes": 1
+}

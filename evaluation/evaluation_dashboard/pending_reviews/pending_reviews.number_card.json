@@ -1,0 +1,18 @@
+{
+ "creation": "2026-11-04 00:00:00.000000",
+ "doctype": "Number Card",
+ "document_type": "Data Review Queue",
+ "dynamic": 1,
+ "filters_json": "[[\"Data Review Queue\",\"status\",\"=\",\"Pending Review\"]]",
+ "function": "Count",
+ "idx": 0,
+ "last_synced_on": "2026-11-04 00:00:00.000000",
+ "modified": "2026-11-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Data Review Center",
+ "name": "Total Pending Reviews",
+ "owner": "Administrator",
+ "show_percentage_stats": 1,
+ "title": "إجمالي المراجعات المعلقة",
+ "type": "Document Type"
+}

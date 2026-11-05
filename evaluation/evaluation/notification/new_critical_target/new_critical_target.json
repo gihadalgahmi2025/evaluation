@@ -1,0 +1,40 @@
+{
+ "attach_files": "",
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition": "doc.priority == \"Critical\" and doc.docstatus < 2",
+ "condition_type": "Python",
+ "creation": "2026-11-05 06:20:57.350349",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Target",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "\n\t\t\t<p>A target was raised to <b>Critical</b> priority.</p>\n\t\t\t<ul>\n\t\t\t\t<li>Target: <a href=\"/app/target/{{ doc.name }}\">{{ doc.target_name }}</a></li>\n\t\t\t\t<li>Type: {{ doc.target_type or \"-\" }}</li>\n\t\t\t\t<li>Unit: {{ doc.evaluation_unit }}</li>\n\t\t\t\t<li>Confidence: {{ doc.confidence or \"-\" }}</li>\n\t\t\t</ul>\n\t\t",
+ "message_type": "Markdown",
+ "minutes_offset": 0,
+ "modified": "2026-11-05 06:20:57.350349",
+ "modified_by": "Administrator",
+ "module": "Evaluation",
+ "name": "New Critical Target",
+ "notification_type": "Alert",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "Evaluation Commander"
+  },
+  {
+   "receiver_by_role": "Evaluation Intel Officer"
+  },
+  {
+   "receiver_by_role": "Evaluation Fires Officer"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "subject": "Critical target nominated: {{ doc.target_name }}",
+ "value_changed": "priority"
+}

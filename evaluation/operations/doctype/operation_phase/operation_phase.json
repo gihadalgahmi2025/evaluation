@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "creation": "2026-07-03 00:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "phase_name",
+  "phase_order",
+  "start_datetime",
+  "end_datetime",
+  "objective",
+  "trigger_condition"
+ ],
+ "fields": [
+  {
+   "fieldname": "phase_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phase Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phase_order",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Phase Order"
+  },
+  {
+   "fieldname": "start_datetime",
+   "fieldtype": "Datetime",
+   "label": "Start",
+   "search_index": 1
+  },
+  {
+   "fieldname": "end_datetime",
+   "fieldtype": "Datetime",
+   "label": "End"
+  },
+  {
+   "fieldname": "objective",
+   "fieldtype": "Small Text",
+   "label": "Objective"
+  },
+  {
+   "fieldname": "trigger_condition",
+   "fieldtype": "Small Text",
+   "label": "Trigger Condition"
+  }
+ ],
+ "istable": 1,
+ "modified": "2026-07-03 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Operations",
+ "name": "Operation Phase",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

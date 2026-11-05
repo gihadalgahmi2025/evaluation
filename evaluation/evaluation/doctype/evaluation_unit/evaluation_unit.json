@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:unit_name",
+ "creation": "2026-05-21 00:00:00",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "unit_name",
+  "abbreviation",
+  "is_default",
+  "lft",
+  "rgt",
+  "is_group",
+  "old_parent",
+  "parent_evaluation_unit"
+ ],
+ "fields": [
+  {
+   "fieldname": "unit_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Unit Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "abbreviation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Abbreviation"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "label": "Is Default"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Old Parent",
+   "options": "Evaluation Unit"
+  },
+  {
+   "fieldname": "parent_evaluation_unit",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Parent Evaluation Unit",
+   "options": "Evaluation Unit"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_tree": 1,
+ "links": [
+  {
+   "group": "Forces",
+   "link_doctype": "Force Arrangement",
+   "link_fieldname": "evaluation_unit"
+  },
+  {
+   "group": "Observations",
+   "link_doctype": "Daily Activities",
+   "link_fieldname": "evaluation_unit"
+  },
+  {
+   "group": "Targets",
+   "link_doctype": "Target",
+   "link_fieldname": "evaluation_unit"
+  },
+  {
+   "group": "Intelligence",
+   "link_doctype": "Intel Report",
+   "link_fieldname": "evaluation_unit"
+  },
+  {
+   "group": "Operations",
+   "link_doctype": "Operation Order",
+   "link_fieldname": "evaluation_unit"
+  },
+  {
+   "group": "Situation Reports",
+   "link_doctype": "Situation Report",
+   "link_fieldname": "evaluation_unit"
+  },
+  {
+   "group": "Threat",
+   "link_doctype": "Threat Assessment",
+   "link_fieldname": "evaluation_unit"
+  },
+  {
+   "group": "Casualties",
+   "link_doctype": "Casualty Report",
+   "link_fieldname": "evaluation_unit"
+  },
+  {
+   "group": "Personnel",
+   "link_doctype": "Personality",
+   "link_fieldname": "evaluation_unit"
+  },
+  {
+   "group": "Forces",
+   "link_doctype": "Enemy Order of Battle",
+   "link_fieldname": "evaluation_unit"
+  }
+ ],
+ "modified": "2026-08-26 17:15:00.000000",
+ "modified_by": "Administrator",
+ "module": "Evaluation",
+ "name": "Evaluation Unit",
+ "naming_rule": "By fieldname",
+ "nsm_parent_field": "parent_evaluation_unit",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

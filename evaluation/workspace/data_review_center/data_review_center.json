@@ -1,0 +1,67 @@
+{
+ "description": "مركز المراجعة والاعتماد — مراجعة البيانات المستخرجة من الأنشطة اليومية قبل إضافتها للسجلات المركزية",
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "check-circle",
+ "is_hidden": 0,
+ "label": "مركز المراجعة والاعتماد",
+ "link": "/app/data-review-center",
+ "module": "Data Review Center",
+ "name": "Data Review Center",
+ "public": 1,
+ "quick_links": [],
+ "show_sidebar": 1,
+ "sort_order": 20,
+ "title": "مركز المراجعة والاعتماد",
+ "type": "Link",
+ "links": [
+  {
+   "dependencies": null,
+   "group": null,
+   "label": "عناصر بانتظار المراجعة",
+   "link_doctype": "Data Review Queue",
+   "link_type": "DocType",
+   "only_for": null,
+   "onboard": 0
+  },
+  {
+   "dependencies": null,
+   "group": null,
+   "label": "قرارات الاعتماد المتخذة",
+   "link_doctype": "Data Review Decision",
+   "link_type": "DocType",
+   "only_for": null,
+   "onboard": 0
+  },
+  {
+   "dependencies": null,
+   "group": null,
+   "label": "سجل التغييرات الكامل",
+   "link_doctype": "Data Change Log",
+   "link_type": "DocType",
+   "only_for": null,
+   "onboard": 0
+  },
+  {
+   "dependencies": null,
+   "group": null,
+   "label": "مرشحات التطابق المحتملة",
+   "link_doctype": "Entity Match Candidate",
+   "link_type": "DocType",
+   "only_for": null,
+   "onboard": 0
+  },
+  {
+   "dependencies": null,
+   "group": null,
+   "label": "تقرير قائمة المراجعة",
+   "link_doctype": "Data Review Queue Report",
+   "link_type": "Report",
+   "only_for": null,
+   "onboard": 0
+  }
+ ],
+ "cards": [],
+ "charts": []
+}

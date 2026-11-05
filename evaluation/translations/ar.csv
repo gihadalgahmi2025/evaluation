@@ -1,0 +1,292 @@
+Evaluation,التقييم
+Reconnaissance,استطلاع
+Order Of Battle,ترتيب المعركة
+Targeting,الأهداف
+Operations,العمليات
+Personnel,أفراد
+Evaluation Unit,وحدة التقييم
+Evaluation Criteria,معيار التقييم
+Evaluation Criteria Group,مجموعة معايير التقييم
+Evaluation Criteria Group Line,سطر معيار
+Evaluation Score Card,بطاقة التقييم
+Evaluation Score Line,سطر درجة
+Evaluation Branch,فرع التقييم
+Evaluation Designation,المسمى الوظيفي
+Evaluation Salutation,اللقب
+Combat Power Weight,وزن القوة القتالية
+Combat Effectiveness Type,نوع الفعالية القتالية
+Combat Effectiveness Line,سطر الفعالية القتالية
+Combat Posture,الوضع القتالي
+Readiness Metric,مقياس الجاهزية
+Readiness Line,سطر الجاهزية
+Activity Side,جهة النشاط
+Activity Worker,العامل الميداني
+Activity Reporter,مصدر التقرير
+Public Activity,النشاط العام
+Daily Activities,الأنشطة اليومية
+Daily Activity Readiness Line,سطر جاهزية النشاط
+Daily Activity Spread Line,سطر انتشار النشاط
+Daily Activity Task Link,ربط مهمة النشاط
+Geolocation,الموقع الجغرافي
+Governorate,المحافظة
+Governorate Directorate,مديرية المحافظة
+Insulation,العزل
+Movement Method,طريقة الحركة
+Geographic Spread,الانتشار الجغرافي
+Tactic spread,الانتشار التكتيكي
+Management spread,الانتشار الإداري
+Enemy Order of Battle,ترتيب معركة العدو
+Force Arrangement,تشكيل القوات
+Military Divisions,الفرق العسكرية
+Division Size,حجم التشكيل
+Division Type,نوع التشكيل
+Division Type Row,سطر نوع التشكيل
+Engagement Force,قوة الاشتباك
+Engagement Force Row,سطر قوة الاشتباك
+Reinforcement Force,قوة التعزيز
+Reinforcement Force Row,سطر قوة التعزيز
+Fire Support Unit,وحدة الإسناد الناري
+Fire Support Unit Type,نوع وحدة الإسناد الناري
+Supply Class,صنف التموين
+Logistics Line,سطر الإمداد
+Ammunition Line,سطر الذخيرة
+Training,التدريب
+Target,الهدف
+Target Category,تصنيف الهدف
+Target Type,نوع الهدف
+Target Carver Line,سطر كارفر
+Target Bda Line,سطر تقييم الأضرار
+Target Status Log,سجل حالة الهدف
+Operation Order,أمر العمليات
+Operation Phase,مرحلة العمليات
+Operation Task,مهمة العمليات
+Operation Force Assignment,إسناد القوة
+Operation Target Link,ربط الهدف بالعملية
+Intel Report,تقرير استخباري
+Situation Report,تقرير الموقف
+Situation Snapshot Line,سطر لقطة الموقف
+Situation Activity Link,ربط النشاط بالموقف
+Situation Layer,طبقة الموقف
+Threat Assessment,تقييم التهديد
+Threat Assessment Line,سطر تقييم التهديد
+Casualty Report,تقرير الخسائر
+Casualty Personnel Line,سطر خسائر الأفراد
+Casualty Equipment Line,سطر خسائر العتاد
+Personality,شخصية
+Personality Dependent,تابع الشخصية
+Army Chief,قائد عسكري
+Employee Education,المؤهل العلمي
+Employee External Work History,الخبرة العملية
+Military Rank,الرتبة العسكرية
+Gender,الجنس
+Unit Ranking,ترتيب الوحدات
+Combat Power Index,مؤشر القوة القتالية
+Criteria Weights,أوزان المعايير
+Observation Coverage,تغطية الرصد
+Observer Performance,أداء المراقبين
+Order of Battle Summary,ملخص ترتيب المعركة
+Force Comparison,مقارنة القوات
+Logistics Readiness,جاهزية الإمداد
+CARVER Matrix,مصفوفة كارفر
+BDA Register,سجل تقييم الأضرار
+Target Priority Board,لوحة أولويات الأهداف
+Intel Source Reliability,موثوقية مصادر الاستخبارات
+Situation Overview,نظرة عامة على الموقف
+Threat Matrix,مصفوفة التهديدات
+Casualty Summary,ملخص الخسائر
+Personnel Roster,كشف الأفراد
+Rank Distribution,توزيع الرتب
+Name,الاسم
+Status,الحالة
+Description,الوصف
+Notes,ملاحظات
+Date,التاريخ
+Type,النوع
+Priority,الأولوية
+Confidence,الثقة
+Active,نشط
+Inactive,غير نشط
+Suspended,موقوف
+Left,منسحب
+Approved,معتمد
+Rejected,مرفوض
+Draft,مسودة
+Closed,مغلق
+Cancelled,ملغى
+Validated,مُصادق عليه
+Pending Review,بانتظار المراجعة
+Critical,حرج
+High,عالي
+Medium,متوسط
+Low,منخفض
+Confirmed,مؤكد
+Probable,محتمل
+Doubtful,مشكوك فيه
+Observed Enemy Unit,الوحدة المعادية المرصودة
+Observed Unit Name,اسم الوحدة المرصودة
+Estimated Size,الحجم المقدر
+Estimated Strength,القوة المقدرة
+Unit Type,نوع الوحدة
+Evaluation Unit Name,اسم وحدة التقييم
+Abbreviation,الاختصار
+Is Default,افتراضي
+Parent Evaluation Unit,وحدة التقييم الأم
+Criterion Name,اسم المعيار
+Criterion Type,نوع المعيار
+Applies To,ينطبق على
+Weight,الوزن
+Max Value,القيمة القصوى
+Is Active,نشط
+Formula Expression,تعبير المعادلة
+Weighted Score,الدرجة الموزونة
+Value,القيمة
+Total Score,الدرجة الكلية
+Rank,الترتيب
+Score Card Title,عنوان بطاقة التقييم
+Subject Type,نوع الموضوع
+Period From,من تاريخ
+Period To,إلى تاريخ
+Criteria Group,مجموعة المعايير
+Score Lines,سطور الدرجات
+Group Name,اسم المجموعة
+Criteria,المعايير
+Posture Name,اسم الوضع
+Posture Name (Arabic),اسم الوضع (عربي)
+Affects Readiness,يؤثر على الجاهزية
+Readiness Modifier,معدل الجاهزية
+Map Color,لون الخريطة
+Symbol Code,رمز الرمز
+Sort Order,ترتيب العرض
+Report Datetime,تاريخ ووقت التقرير
+Observed Sector,القطاع المرصود
+Overall Status,الحالة العامة
+Enemy Summary,ملخص العدو
+Collection Notes,ملاحظات الرصد
+Weather,الطقس
+Snapshot Lines,سطور اللقطة
+Linked Activities,الأنشطة المرتبطة
+Target Name,اسم الهدف
+Target Number,رقم الهدف
+Latitude,خط العرض
+Longitude,خط الطول
+MGRS,إحداثيات MGRS
+Elevation,الارتفاع
+Directorate,المديرية
+Priority Score,درجة الأولوية
+Collateral Risk,خطر الأضرار الجانبية
+Recommended Fire,النيران الموصى بها
+Restrike Recommended,إعادة الضرب موصى بها
+No Strike,محظور الضرب
+Valid From,صالح من
+Valid Until,صالح حتى
+CARVER Lines,سطور كارفر
+BDA Lines,سطور تقييم الأضرار
+Status Log,سجل الحالة
+Source,المصدر
+Assigned Unit,الوحدة المكلفة
+Location,الموقع
+Location on Map,الموقع على الخريطة
+Person Full Name,الاسم الكامل
+First Name,الاسم الأول
+Middle Name,الاسم الأوسط
+Last Name,اسم العائلة
+Full Name,الاسم الكامل
+Date of Birth,تاريخ الميلاد
+Date of Joining,تاريخ الالتحاق
+Rank Name,اسم الرتبة
+Military Rank Name,اسم الرتبة العسكرية
+Mobile,الجوال
+Personal Email,البريد الشخصي
+Current Address,العنوان الحالي
+Permanent Address,العنوان الدائم
+Blood Group,فصيلة الدم
+Marital Status,الحالة الاجتماعية
+Passport Number,رقم الجواز
+Image,الصورة
+Direct Supervisor,المدير المباشر
+Military Division,التشكيل العسكري
+Designation,المسمى الوظيفي
+Financial Number,الرقم المالي
+Personality Number,رقم الشخصية
+Education,المؤهل العلمي
+External Work History,الخبرة العملية
+Dependents,التابعون
+Offensive,هجومي
+Defensive,دفاعي
+Transition,انتقالي
+Stabilization,استقرار
+Planned,مخطط
+Completed,مكتمل
+Deferred,مؤجل
+Attack,هجوم
+Defend,دفاع
+Delay,تأخير
+Withdraw,انسحاب
+Reserve,احتياط
+Reorganize,إعادة تنظيم
+Consolidate,تثبيت
+Ambush,كمين
+Screen,حجاب
+Guard,حماية
+Unlocated,غير محدد الموقع
+Equipment,عتاد
+General,عام
+Combat,قتالي
+Spiritual,معنوي
+Other,أخرى
+Geographic,جغرافي
+Tactic,تكتيكي
+Management,إداري
+Numeric,رقمي
+Boolean,منطقي
+Percentage,نسبة مئوية
+Formula,معادلة
+HUMINT,معلومات بشرية
+SIGINT,إشارات
+IMINT,صور جوية
+OSINT,مصادر مفتوحة
+Field Recon,استطلاع ميداني
+Quiet,هادئ
+Limited Contact,تماس محدود
+Heavy Contact,تماس كثيف
+No Damage,بدون أضرار
+Light,خفيف
+Moderate,متوسط
+Severe,شديد
+Destroyed,مدمر
+Full,كامل
+Degraded,متدهور
+Enhanced,معزز
+Reduced,مخفض
+Normal,طبيعي
+Green,أخضر
+Yellow,أصفر
+Red,أحمر
+Main,رئيسي
+Support,إسناد
+Destroy,تدمير
+Neutralize,تحييد
+Disrupt,تعطيل
+Deceive,خداع
+Not Started,لم يبدأ
+In Progress,قيد التنفيذ
+Stalled,متوقف
+OPCON,سيطرة عملياتية
+TACON,سيطرة تكتيكية
+Criticality,الحرجية
+Accessibility,إمكانية الوصول
+Recuperability,قابلية الاستعادة
+Vulnerability,القابلية للاستهداف
+Effect,الأثر
+Recognizability,سهولة التعرف
+Out of Contact,خارج التماس
+In Contact,في التماس
+Encircled,محاصر
+Surrounded,مطوق
+km,كم
+day,يوم
+days,أيام
+Record in use,السجل قيد الاستخدام
+Duplicate observation,رصد مكرر
+Invalid supervisor,مدير غير صالح
+No-strike target,هدف محظور الضرب

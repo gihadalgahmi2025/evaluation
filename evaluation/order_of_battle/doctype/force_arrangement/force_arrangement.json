@@ -1,0 +1,668 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "autoname": "field:name_div",
+ "creation": "2024-04-05 06:53:57.760293",
+ "default_view": "List",
+ "description": "Enemy order of battle: identity, estimated strength, spread, readiness, posture and sustainment. Updated from Daily Activities.",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_details_tab",
+  "basic_information",
+  "naming_series",
+  "name_div",
+  "unit_image",
+  "size_div",
+  "type_div",
+  "notes_div",
+  "column_break_95so",
+  "date",
+  "augmentation_and_reduction_div",
+  "dependency_size_div",
+  "is_group",
+  "parent_force_arrangement",
+  "dependency_type_div",
+  "evaluation_unit",
+  "army_chief",
+  "spread_tab",
+  "moves_methods_used_section",
+  "moves_methods_used",
+  "geographic_spread_section",
+  "geographice_spread",
+  "tactice_spread_section",
+  "tactic_spread",
+  "management_spread",
+  "getting_ready_tab",
+  "readiness_metrics_section",
+  "readiness_lines",
+  "getting_ready_units_section",
+  "engagement_forces",
+  "column_break_vvpr",
+  "reinforcement_forces",
+  "fire_support_units",
+  "trainings_tab",
+  "evidence_of_the_level_of_training_section",
+  "training",
+  "combat_effectiveness_tab",
+  "combat_effectiveness_section",
+  "combat_effectiveness_lines",
+  "sustainment_tab",
+  "sustainment_section",
+  "logistics_lines",
+  "ammunition_lines",
+  "c2_status_section",
+  "current_posture",
+  "column_break_c2a",
+  "combat_power_index",
+  "strength_pct",
+  "column_break_c2b",
+  "committed_pct",
+  "last_sitrep",
+  "last_daily_activity",
+  "last_observed",
+  "linked_enemy_ob",
+  "observation_confidence",
+  "latitude",
+  "location_section",
+  "governorate_name",
+  "directorate_name",
+  "insulation",
+  "col_break_location",
+  "location",
+  "longitude",
+  "connections_tab",
+  "lft",
+  "rgt",
+  "old_parent",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Observed Unit"
+  },
+  {
+   "fieldname": "basic_information",
+   "fieldtype": "Section Break",
+   "label": "Enemy Unit Identity",
+   "oldfieldtype": "Section Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "size_div",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Estimated Size",
+   "options": "Division Size"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "name_div",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Observed Unit Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "type_div",
+   "fieldtype": "Table MultiSelect",
+   "label": "Unit Type",
+   "options": "Division Type Row"
+  },
+  {
+   "fieldname": "notes_div",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_95so",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "augmentation_and_reduction_div",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Observed Strength Change",
+   "options": "\nEnhanced\nReduced\nNormal"
+  },
+  {
+   "fieldname": "dependency_size_div",
+   "fieldtype": "Link",
+   "label": "Dependency Division Size",
+   "options": "Division Size"
+  },
+  {
+   "fieldname": "dependency_type_div",
+   "fieldtype": "Select",
+   "label": "Dependency Division Type",
+   "options": "\nOperational\nAdministrative"
+  },
+  {
+   "fieldname": "spread_tab",
+   "fieldtype": "Tab Break",
+   "label": "Spread"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "moves_methods_used_section",
+   "fieldtype": "Section Break",
+   "label": "Movement and Roads"
+  },
+  {
+   "fieldname": "moves_methods_used",
+   "fieldtype": "Table",
+   "label": "Road and Movement Waypoints",
+   "options": "Movement Method"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "geographic_spread_section",
+   "fieldtype": "Section Break",
+   "label": "Geographic Spread"
+  },
+  {
+   "fieldname": "geographice_spread",
+   "fieldtype": "Table",
+   "label": "Geographic Spread Points",
+   "options": "Geographic Spread"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "tactice_spread_section",
+   "fieldtype": "Section Break",
+   "label": "Tactical Spread"
+  },
+  {
+   "fieldname": "tactic_spread",
+   "fieldtype": "Table",
+   "label": "Tactical Spread Points",
+   "options": "Tactic spread"
+  },
+  {
+   "fieldname": "management_spread",
+   "fieldtype": "Table",
+   "label": "Administrative Spread Points",
+   "options": "Management spread"
+  },
+  {
+   "fieldname": "getting_ready_tab",
+   "fieldtype": "Tab Break",
+   "label": "Estimated Readiness"
+  },
+  {
+   "fieldname": "getting_ready_units_section",
+   "fieldtype": "Section Break",
+   "label": "Observed Combat Elements"
+  },
+  {
+   "fieldname": "engagement_forces",
+   "fieldtype": "Table MultiSelect",
+   "label": "Observed Engagement Elements",
+   "options": "Engagement Force Row"
+  },
+  {
+   "fieldname": "reinforcement_forces",
+   "fieldtype": "Table MultiSelect",
+   "label": "Observed Reinforcements",
+   "options": "Reinforcement Force Row"
+  },
+  {
+   "fieldname": "fire_support_units",
+   "fieldtype": "Table",
+   "label": "Fire Support Units",
+   "options": "Fire Support Unit"
+  },
+  {
+   "fieldname": "trainings_tab",
+   "fieldtype": "Tab Break",
+   "label": "Trainings"
+  },
+  {
+   "fieldname": "evidence_of_the_level_of_training_section",
+   "fieldtype": "Section Break",
+   "label": "Evidence of the level of training"
+  },
+  {
+   "fieldname": "training",
+   "fieldtype": "Table",
+   "label": "Training",
+   "options": "Training"
+  },
+  {
+   "fieldname": "combat_effectiveness_tab",
+   "fieldtype": "Tab Break",
+   "label": "Combat Effectiveness"
+  },
+  {
+   "fieldname": "combat_effectiveness_section",
+   "fieldtype": "Section Break",
+   "label": "Combat Effectiveness"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "options": "EV-AOF-",
+   "print_hide": 1,
+   "report_hide": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "connections_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connections",
+   "show_dashboard": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "evaluation_unit",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_standard_filter": 1,
+   "label": "Evaluation Unit",
+   "options": "Evaluation Unit",
+   "print_hide": 1,
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Date",
+   "no_copy": 1,
+   "search_index": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "parent_force_arrangement",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Parent Unit",
+   "options": "Force Arrangement",
+   "search_index": 1
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Old Parent"
+  },
+  {
+   "fieldname": "army_chief",
+   "fieldtype": "Table",
+   "label": "Observed Commanders",
+   "options": "Army Chief"
+  },
+  {
+   "fieldname": "column_break_vvpr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "readiness_metrics_section",
+   "fieldtype": "Section Break",
+   "label": "Readiness Metrics"
+  },
+  {
+   "fieldname": "readiness_lines",
+   "fieldtype": "Table",
+   "label": "Readiness Lines",
+   "options": "Readiness Line"
+  },
+  {
+   "fieldname": "combat_effectiveness_lines",
+   "fieldtype": "Table",
+   "label": "Combat Effectiveness Lines",
+   "options": "Combat Effectiveness Line"
+  },
+  {
+   "fieldname": "sustainment_tab",
+   "fieldtype": "Tab Break",
+   "label": "Sustainment"
+  },
+  {
+   "fieldname": "sustainment_section",
+   "fieldtype": "Section Break",
+   "label": "Logistics and Ammunition"
+  },
+  {
+   "fieldname": "logistics_lines",
+   "fieldtype": "Table",
+   "label": "Logistics Lines",
+   "options": "Logistics Line"
+  },
+  {
+   "fieldname": "ammunition_lines",
+   "fieldtype": "Table",
+   "label": "Ammunition Lines",
+   "options": "Ammunition Line"
+  },
+  {
+   "fieldname": "c2_status_section",
+   "fieldtype": "Section Break",
+   "label": "Observed Status"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "current_posture",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Current Posture",
+   "options": "Combat Posture",
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_c2a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "combat_power_index",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Combat Power Index",
+   "read_only": 1
+  },
+  {
+   "default": "100",
+   "fieldname": "strength_pct",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Strength %"
+  },
+  {
+   "fieldname": "column_break_c2b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "committed_pct",
+   "fieldtype": "Percent",
+   "label": "Observed Commitment %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_sitrep",
+   "fieldtype": "Link",
+   "label": "Last Situation Report",
+   "options": "Situation Report",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "last_daily_activity",
+   "fieldtype": "Link",
+   "label": "Last Daily Activity",
+   "options": "Daily Activities",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "last_observed",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Last Observed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "linked_enemy_ob",
+   "fieldtype": "Link",
+   "label": "Linked Enemy OB",
+   "options": "Enemy Order of Battle",
+   "search_index": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "Probable",
+   "fieldname": "observation_confidence",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Observation Confidence",
+   "options": "\nConfirmed\nProbable\nDoubtful"
+  },
+  {
+   "fieldname": "unit_image",
+   "fieldtype": "Attach Image",
+   "hidden": 0,
+   "label": "Unit Image"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Latitude",
+   "precision": "6",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "location_section",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "governorate_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Governorate",
+   "options": "Governorate",
+   "search_index": 1
+  },
+  {
+   "fieldname": "directorate_name",
+   "fieldtype": "Link",
+   "label": "Directorate",
+   "options": "Governorate Directorate",
+   "search_index": 1
+  },
+  {
+   "fieldname": "insulation",
+   "fieldtype": "Link",
+   "label": "Insulation",
+   "options": "Insulation",
+   "search_index": 1
+  },
+  {
+   "fieldname": "col_break_location",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Geolocation",
+   "label": "Location on Map"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Longitude",
+   "precision": "6",
+   "read_only": 1
+  }
+ ],
+ "icon": "fa fa-sitemap",
+ "image_field": "unit_image",
+ "is_tree": 1,
+ "links": [
+  {
+   "group": "Observations",
+   "link_doctype": "Daily Activities",
+   "link_fieldname": "military_division"
+  },
+  {
+   "group": "Targets",
+   "link_doctype": "Target",
+   "link_fieldname": "assigned_unit"
+  },
+  {
+   "group": "Operations",
+   "link_doctype": "Operation Order",
+   "link_fieldname": "commanding_unit"
+  },
+  {
+   "group": "Intelligence",
+   "link_doctype": "Intel Report",
+   "link_fieldname": "observed_force"
+  },
+  {
+   "group": "Situation Reports",
+   "link_doctype": "Situation Report",
+   "link_fieldname": "sector"
+  },
+  {
+   "group": "Threat",
+   "link_doctype": "Threat Assessment",
+   "link_fieldname": "sector"
+  },
+  {
+   "group": "Casualties",
+   "link_doctype": "Casualty Report",
+   "link_fieldname": "force_arrangement"
+  },
+  {
+   "group": "Forces",
+   "link_doctype": "Enemy Order of Battle",
+   "link_fieldname": "linked_force_arrangement"
+  },
+  {
+   "group": "Personnel",
+   "link_doctype": "Personality",
+   "link_fieldname": "branch"
+  },
+  {
+   "group": "Scoring",
+   "link_doctype": "Evaluation Score Card",
+   "link_fieldname": "force_arrangement"
+  }
+ ],
+ "modified": "2026-08-27 05:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Order Of Battle",
+ "name": "Force Arrangement",
+ "naming_rule": "By fieldname",
+ "nsm_parent_field": "parent_force_arrangement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "row_format": "Dynamic",
+ "search_fields": "name_div,size_div,current_posture,observation_confidence,parent_force_arrangement",
+ "show_name_in_global_search": 1,
+ "show_preview_popup": 1,
+ "show_title_field_in_link": 1,
+ "sort_field": "lft",
+ "sort_order": "ASC",
+ "states": [
+  {
+   "color": "Green",
+   "title": "Confirmed"
+  },
+  {
+   "color": "Orange",
+   "title": "Probable"
+  },
+  {
+   "color": "Red",
+   "title": "Doubtful"
+  }
+ ],
+ "title_field": "name_div",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

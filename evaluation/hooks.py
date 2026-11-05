@@ -1,221 +1,190 @@
+# Copyright (c) 2026, Aljahmi and contributors
+# For license information, please see license.txt
+"""Evaluation - enemy reconnaissance app for Frappe Framework v16.
+
+Modules
+-------
+Evaluation       Evaluation units, criteria, score cards, readiness & combat power
+Reconnaissance   Daily observations, geography, spread layers
+Order Of Battle  Enemy order of battle, force arrangement, logistics, fire support
+Targeting        Targets, CARVER/BDA analysis, target categories
+Operations       Operations orders, intel, situation reports, threat, casualties
+Personnel        Persons under evaluation, ranks, affiliations, dependents
+"""
+
 app_name = "evaluation"
 app_title = "Evaluation"
 app_publisher = "Aljahmi"
-app_description = "Industrial Capacity Assesment Tool"
-app_email = "aljahmi2002@gmail.com"
-app_license = "mit"
-# required_apps = []
+app_description = "Enemy reconnaissance: order of battle, daily observations, targets, and situation"
+app_email = "gihadalgahmi@gmail.com"
+app_license = "MIT"
+app_version = "0.1.0"
 
-# Includes in <head>
-# ------------------
+required_apps = ["frappe"]
 
-# include js, css files in header of desk.html
-# app_include_css = "/assets/evaluation/css/evaluation.css"
-# app_include_js = "/assets/evaluation/js/evaluation.js"
+# ---------------------------------------------------------------------------
+# Includes - loaded on every desk page
+# ---------------------------------------------------------------------------
+app_include_css = "evaluation.bundle.css"
+app_include_js = "evaluation.bundle.js"
 
-# include js, css files in header of web template
-# web_include_css = "/assets/evaluation/css/evaluation.css"
-# web_include_js = "/assets/evaluation/js/evaluation.js"
+doctype_js = {
+	"Target": "public/js/target.js",
+	"Daily Activities": "public/js/daily_activities.js",
+	"Force Arrangement": "public/js/force_arrangement.js",
+	"Personality": "public/js/personality.js",
+}
 
-# include custom scss in every website theme (without file extension ".scss")
-# website_theme_scss = "evaluation/public/scss/website"
+doctype_list_js = {
+	"Target": "public/js/list/target_list.js",
+	"Daily Activities": "public/js/list/daily_activities_list.js",
+}
 
-# include js, css files in header of web form
-# webform_include_js = {"doctype": "public/js/doctype.js"}
-# webform_include_css = {"doctype": "public/css/doctype.css"}
+# ---------------------------------------------------------------------------
+# Document events
+# ---------------------------------------------------------------------------
+doc_events = {
+	"*": {
+		"validate": "evaluation.utils.validate_common_rules",
+	},
+	"Evaluation Criteria": {
+		"validate": "evaluation.evaluation.doctype.evaluation_criteria.evaluation_criteria.validate_criteria",
+	},
+	"Evaluation Criteria Group": {
+		"validate": "evaluation.evaluation.doctype.evaluation_criteria_group.evaluation_criteria_group.validate_group",
+	},
+	"Evaluation Score Card": {
+		"validate": "evaluation.evaluation.doctype.evaluation_score_card.evaluation_score_card.compute_total",
+		"on_update": "evaluation.evaluation.doctype.evaluation_score_card.evaluation_score_card.refresh_ranking",
+	},
+	"Force Arrangement": {
+		"validate": "evaluation.order_of_battle.doctype.force_arrangement.force_arrangement.validate_force",
+	},
+	"Enemy Order of Battle": {
+		"validate": "evaluation.order_of_battle.doctype.enemy_order_of_battle.enemy_order_of_battle.validate_ob",
+	},
+	"Daily Activities": {
+		"validate": "evaluation.reconnaissance.doctype.daily_activities.daily_activities.validate_activity",
+		"on_submit": "evaluation.reconnaissance.doctype.daily_activities.daily_activities.after_submit_activity",
+		"on_cancel": "evaluation.reconnaissance.doctype.daily_activities.daily_activities.on_cancel_activity",
+	},
+	"Intel Report": {
+		"validate": "evaluation.operations.doctype.intel_report.intel_report.validate_intel",
+	},
+	"Target": {
+		"validate": "evaluation.targeting.doctype.target.target.validate_target",
+		"on_update": "evaluation.targeting.doctype.target.target.log_status_change",
+	},
+	"Operation Order": {
+		"validate": "evaluation.operations.doctype.operation_order.operation_order.validate_operation",
+	},
+	"Situation Report": {
+		"validate": "evaluation.operations.doctype.situation_report.situation_report.validate_sitrep",
+	},
+	"Casualty Report": {
+		"validate": "evaluation.operations.doctype.casualty_report.casualty_report.compute_casualties",
+	},
+	"Personality": {
+		"before_save": "evaluation.personnel.doctype.personality.personality.set_full_name",
+	},
+	"Threat Assessment": {
+		"validate": "evaluation.operations.doctype.threat_assessment.threat_assessment.compute_threat",
+	},
+}
 
-# include js in page
-# page_js = {"page" : "public/js/file.js"}
+# ---------------------------------------------------------------------------
+# Scheduled tasks
+# ---------------------------------------------------------------------------
+scheduler_events = {
+	"daily": [
+		"evaluation.tasks.expire_targets",
+		"evaluation.tasks.refresh_observation_freshness",
+	],
+	"weekly": [
+		"evaluation.tasks.flag_stale_intel",
+	],
+	"hourly": ["evaluation.tasks.recompute_priority_scores"],
+}
 
-# include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
-# doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
-# doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+# ---------------------------------------------------------------------------
+# Roles
+# ---------------------------------------------------------------------------
+ROLE_HIERARCHY = {
+	"Evaluation Manager": ("Evaluation User",),
+	"Evaluation Commander": ("Evaluation Manager",),
+	"Evaluation Intel Officer": ("Evaluation User",),
+	"Evaluation Ops Officer": ("Evaluation User",),
+	"Evaluation Fires Officer": ("Evaluation User",),
+	"Evaluation Logistics Officer": ("Evaluation User",),
+}
 
-# Svg Icons
-# ------------------
-# include app icons in desk
-# app_include_icons = "evaluation/public/icons.svg"
+permission_query_conditions = {
+	"Daily Activities": "evaluation.permissions.daily_activities_query",
+	"Intel Report": "evaluation.permissions.intel_report_query",
+	"Target": "evaluation.permissions.target_query",
+}
 
-# Home Pages
-# ----------
+has_permission = {
+	"Daily Activities": "evaluation.permissions.has_activity_permission",
+	"Intel Report": "evaluation.permissions.has_intel_permission",
+	"Target": "evaluation.permissions.has_target_permission",
+}
 
-# application home page (will override Website Settings)
-# home_page = "login"
+# ---------------------------------------------------------------------------
+# Global search
+# ---------------------------------------------------------------------------
+global_search_doctypes = {
+	"Default": [
+		{"doctype": "Target", "index": 1},
+		{"doctype": "Enemy Order of Battle", "index": 2},
+		{"doctype": "Force Arrangement", "index": 3},
+		{"doctype": "Daily Activities", "index": 4},
+		{"doctype": "Intel Report", "index": 5},
+		{"doctype": "Situation Report", "index": 6},
+		{"doctype": "Operation Order", "index": 7},
+		{"doctype": "Personality", "index": 8},
+		{"doctype": "Evaluation Unit", "index": 9},
+		{"doctype": "Threat Assessment", "index": 10},
+	]
+}
 
-# website user home page (by Role)
-# role_home_page = {
-#	"Role": "home_page"
-# }
+# ---------------------------------------------------------------------------
+# Fixtures
+# ---------------------------------------------------------------------------
+fixtures = [
+	{"dt": "Role", "filters": [["name", "like", "Evaluation%"]]},
+	{"dt": "Workflow", "filters": [["document_type", "in", [
+		"Daily Activities", "Intel Report", "Target", "Operation Order",
+		"Situation Report", "Casualty Report", "Threat Assessment"]]]},
+	{"dt": "Workflow State"},
+	{"dt": "Workflow Action Master"},
+	{"dt": "Notification", "filters": [["module", "in", ["Evaluation", "Activity Processing Engine", "Data Review Center"]]]},
+	{"dt": "Dashboard", "filters": [["module", "in", ["Evaluation", "Activity Processing Engine", "Data Review Center"]]]},
+	{"dt": "Dashboard Chart", "filters": [["module", "in", ["Evaluation", "Activity Processing Engine", "Data Review Center"]]]},
+	{"dt": "Number Card", "filters": [["module", "in", ["Evaluation", "Activity Processing Engine", "Data Review Center"]]]},
+	{"dt": "Report", "filters": [["module", "in", ["Evaluation", "Activity Processing Engine", "Data Review Center"]], ["is_standard", "=", "Yes"]]},
+	{"dt": "Print Format", "filters": [["module", "in", ["Evaluation", "Activity Processing Engine", "Data Review Center"]]]},
+]
 
-# Generators
-# ----------
+# ---------------------------------------------------------------------------
+# Boot, install, jinja
+# ---------------------------------------------------------------------------
+boot_session = "evaluation.boot.boot_session"
 
-# automatically create page for each record of this doctype
-# website_generators = ["Web Page"]
+after_install = "evaluation.setup.after_install"
+after_migrate = "evaluation.setup.after_migrate"
+before_uninstall = "evaluation.setup.before_uninstall"
 
-# Jinja
-# ----------
+jinja = {
+	"methods": [
+		"evaluation.utils.get_force_display_name",
+		"evaluation.utils.get_readiness_color",
+		"evaluation.utils.get_unit_strength",
+	],
+	"filters": [
+		"evaluation.utils.mask_coordinates",
+		"evaluation.utils.format_mgrs",
+	],
+}
 
-# add methods and filters to jinja environment
-# jinja = {
-#	"methods": "evaluation.utils.jinja_methods",
-#	"filters": "evaluation.utils.jinja_filters"
-# }
-
-# Installation
-# ------------
-
-# before_install = "evaluation.install.before_install"
-# after_install = "evaluation.install.after_install"
-
-# Uninstallation
-# ------------
-
-# before_uninstall = "evaluation.uninstall.before_uninstall"
-# after_uninstall = "evaluation.uninstall.after_uninstall"
-
-# Integration Setup
-# ------------------
-# To set up dependencies/integrations with other apps
-# Name of the app being installed is passed as an argument
-
-# before_app_install = "evaluation.utils.before_app_install"
-# after_app_install = "evaluation.utils.after_app_install"
-
-# Integration Cleanup
-# -------------------
-# To clean up dependencies/integrations with other apps
-# Name of the app being uninstalled is passed as an argument
-
-# before_app_uninstall = "evaluation.utils.before_app_uninstall"
-# after_app_uninstall = "evaluation.utils.after_app_uninstall"
-
-# Desk Notifications
-# ------------------
-# See frappe.core.notifications.get_notification_config
-
-# notification_config = "evaluation.notifications.get_notification_config"
-
-# Permissions
-# -----------
-# Permissions evaluated in scripted ways
-
-# permission_query_conditions = {
-#	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
-# }
-#
-# has_permission = {
-#	"Event": "frappe.desk.doctype.event.event.has_permission",
-# }
-
-# DocType Class
-# ---------------
-# Override standard doctype classes
-
-# override_doctype_class = {
-#	"ToDo": "custom_app.overrides.CustomToDo"
-# }
-
-# Document Events
-# ---------------
-# Hook on document methods and events
-
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
-
-# Scheduled Tasks
-# ---------------
-
-# scheduler_events = {
-#	"all": [
-#		"evaluation.tasks.all"
-#	],
-#	"daily": [
-#		"evaluation.tasks.daily"
-#	],
-#	"hourly": [
-#		"evaluation.tasks.hourly"
-#	],
-#	"weekly": [
-#		"evaluation.tasks.weekly"
-#	],
-#	"monthly": [
-#		"evaluation.tasks.monthly"
-#	],
-# }
-
-# Testing
-# -------
-
-# before_tests = "evaluation.install.before_tests"
-
-# Overriding Methods
-# ------------------------------
-#
-# override_whitelisted_methods = {
-#	"frappe.desk.doctype.event.event.get_events": "evaluation.event.get_events"
-# }
-#
-# each overriding function accepts a `data` argument;
-# generated from the base implementation of the doctype dashboard,
-# along with any modifications made in other Frappe apps
-# override_doctype_dashboards = {
-#	"Task": "evaluation.task.get_dashboard_data"
-# }
-
-# exempt linked doctypes from being automatically cancelled
-#
-# auto_cancel_exempted_doctypes = ["Auto Repeat"]
-
-# Ignore links to specified DocTypes when deleting documents
-# -----------------------------------------------------------
-
-# ignore_links_on_delete = ["Communication", "ToDo"]
-
-# Request Events
-# ----------------
-# before_request = ["evaluation.utils.before_request"]
-# after_request = ["evaluation.utils.after_request"]
-
-# Job Events
-# ----------
-# before_job = ["evaluation.utils.before_job"]
-# after_job = ["evaluation.utils.after_job"]
-
-# User Data Protection
-# --------------------
-
-# user_data_fields = [
-#	{
-#		"doctype": "{doctype_1}",
-#		"filter_by": "{filter_by}",
-#		"redact_fields": ["{field_1}", "{field_2}"],
-#		"partial": 1,
-#	},
-#	{
-#		"doctype": "{doctype_2}",
-#		"filter_by": "{filter_by}",
-#		"partial": 1,
-#	},
-#	{
-#		"doctype": "{doctype_3}",
-#		"strict": False,
-#	},
-#	{
-#		"doctype": "{doctype_4}"
-#	}
-# ]
-
-# Authentication and authorization
-# --------------------------------
-
-# auth_hooks = [
-#	"evaluation.auth.validate"
-# ]
+extend_doctype_class = {}

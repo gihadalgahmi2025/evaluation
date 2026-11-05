@@ -1,0 +1,12 @@
+include README.md
+include license.txt
+include pyproject.toml
+recursive-include evaluation *.json
+recursive-include evaluation *.js
+recursive-include evaluation *.py
+recursive-include evaluation *.csv
+recursive-include evaluation *.html
+recursive-include evaluation *.svg
+recursive-include evaluation *.md
+recursive-include evaluation *.txt
+recursive-exclude evaluation *.pyc

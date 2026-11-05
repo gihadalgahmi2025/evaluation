@@ -1,0 +1,23 @@
+{
+ "aggregate_function_based_on": "total_score",
+ "creation": "2026-11-05 06:13:13.553746",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Evaluation Score Card",
+ "filters_json": "[[\"Evaluation Score Card\", \"docstatus\", \"=\", 1]]",
+ "function": "Average",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Average Score",
+ "modified": "2026-11-05 06:29:22.362516",
+ "modified_by": "Administrator",
+ "module": "Evaluation",
+ "name": "Average Score",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_full_number": 0,
+ "show_percentage_stats": 0,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}

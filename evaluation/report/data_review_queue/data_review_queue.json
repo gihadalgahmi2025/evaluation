@@ -1,0 +1,34 @@
+{
+ "add_total_row": 0,
+ "creation": "2026-11-04 00:00:00.000000",
+ "description": "تقرير قائمة المراجعة — جميع العناصر بانتظار الاعتماد البشري",
+ "disable_prepared_report": 1,
+ "docstatus": 0,
+ "doctype": "Report",
+ "idx": 0,
+ "is_standard": "Yes",
+ "module": "Data Review Center",
+ "name": "Data Review Queue Report",
+ "owner": "Administrator",
+ "query": "SELECT drq.name AS review_id, drq.item_type AS type, drq.entity_name AS entity, drq.source_activity AS activity, drq.proposed_value AS proposed, drq.confidence AS confidence, drq.status AS status, drq.created_on AS created, drq.decided_by AS decided_by, drq.decided_on AS decided_on, drq.notes AS notes FROM `tabData Review Queue` drq ORDER BY drq.created_on DESC LIMIT 500",
+ "ref_report_doctype": "",
+ "report_name": "Data Review Queue Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Evaluation Manager"
+  },
+  {
+   "role": "Evaluation User"
+  },
+  {
+   "role": "Evaluation Intel Officer"
+  },
+  {
+   "role": "Evaluation Commander"
+  }
+ ]
+}

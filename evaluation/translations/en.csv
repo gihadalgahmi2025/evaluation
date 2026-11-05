@@ -1,0 +1,292 @@
+Evaluation,Evaluation
+Reconnaissance,Reconnaissance
+Order Of Battle,Order Of Battle
+Targeting,Targeting
+Operations,Operations
+Personnel,Personnel
+Evaluation Unit,Evaluation Unit
+Evaluation Criteria,Evaluation Criteria
+Evaluation Criteria Group,Evaluation Criteria Group
+Evaluation Criteria Group Line,Evaluation Criteria Group Line
+Evaluation Score Card,Evaluation Score Card
+Evaluation Score Line,Evaluation Score Line
+Evaluation Branch,Evaluation Branch
+Evaluation Designation,Evaluation Designation
+Evaluation Salutation,Evaluation Salutation
+Combat Power Weight,Combat Power Weight
+Combat Effectiveness Type,Combat Effectiveness Type
+Combat Effectiveness Line,Combat Effectiveness Line
+Combat Posture,Combat Posture
+Readiness Metric,Readiness Metric
+Readiness Line,Readiness Line
+Activity Side,Activity Side
+Activity Worker,Activity Worker
+Activity Reporter,Activity Reporter
+Public Activity,Public Activity
+Daily Activities,Daily Activities
+Daily Activity Readiness Line,Daily Activity Readiness Line
+Daily Activity Spread Line,Daily Activity Spread Line
+Daily Activity Task Link,Daily Activity Task Link
+Geolocation,Geolocation
+Governorate,Governorate
+Governorate Directorate,Governorate Directorate
+Insulation,Insulation
+Movement Method,Movement Method
+Geographic Spread,Geographic Spread
+Tactic spread,Tactic spread
+Management spread,Management spread
+Enemy Order of Battle,Enemy Order of Battle
+Force Arrangement,Force Arrangement
+Military Divisions,Military Divisions
+Division Size,Division Size
+Division Type,Division Type
+Division Type Row,Division Type Row
+Engagement Force,Engagement Force
+Engagement Force Row,Engagement Force Row
+Reinforcement Force,Reinforcement Force
+Reinforcement Force Row,Reinforcement Force Row
+Fire Support Unit,Fire Support Unit
+Fire Support Unit Type,Fire Support Unit Type
+Supply Class,Supply Class
+Logistics Line,Logistics Line
+Ammunition Line,Ammunition Line
+Training,Training
+Target,Target
+Target Category,Target Category
+Target Type,Target Type
+Target Carver Line,Target Carver Line
+Target Bda Line,Target Bda Line
+Target Status Log,Target Status Log
+Operation Order,Operation Order
+Operation Phase,Operation Phase
+Operation Task,Operation Task
+Operation Force Assignment,Operation Force Assignment
+Operation Target Link,Operation Target Link
+Intel Report,Intel Report
+Situation Report,Situation Report
+Situation Snapshot Line,Situation Snapshot Line
+Situation Activity Link,Situation Activity Link
+Situation Layer,Situation Layer
+Threat Assessment,Threat Assessment
+Threat Assessment Line,Threat Assessment Line
+Casualty Report,Casualty Report
+Casualty Personnel Line,Casualty Personnel Line
+Casualty Equipment Line,Casualty Equipment Line
+Personality,Personality
+Personality Dependent,Personality Dependent
+Army Chief,Army Chief
+Employee Education,Employee Education
+Employee External Work History,Employee External Work History
+Military Rank,Military Rank
+Gender,Gender
+Unit Ranking,Unit Ranking
+Combat Power Index,Combat Power Index
+Criteria Weights,Criteria Weights
+Observation Coverage,Observation Coverage
+Observer Performance,Observer Performance
+Order of Battle Summary,Order of Battle Summary
+Force Comparison,Force Comparison
+Logistics Readiness,Logistics Readiness
+CARVER Matrix,CARVER Matrix
+BDA Register,BDA Register
+Target Priority Board,Target Priority Board
+Intel Source Reliability,Intel Source Reliability
+Situation Overview,Situation Overview
+Threat Matrix,Threat Matrix
+Casualty Summary,Casualty Summary
+Personnel Roster,Personnel Roster
+Rank Distribution,Rank Distribution
+Name,Name
+Status,Status
+Description,Description
+Notes,Notes
+Date,Date
+Type,Type
+Priority,Priority
+Confidence,Confidence
+Active,Active
+Inactive,Inactive
+Suspended,Suspended
+Left,Left
+Approved,Approved
+Rejected,Rejected
+Draft,Draft
+Closed,Closed
+Cancelled,Cancelled
+Validated,Validated
+Pending Review,Pending Review
+Critical,Critical
+High,High
+Medium,Medium
+Low,Low
+Confirmed,Confirmed
+Probable,Probable
+Doubtful,Doubtful
+Observed Enemy Unit,Observed Enemy Unit
+Observed Unit Name,Observed Unit Name
+Estimated Size,Estimated Size
+Estimated Strength,Estimated Strength
+Unit Type,Unit Type
+Evaluation Unit Name,Evaluation Unit Name
+Abbreviation,Abbreviation
+Is Default,Is Default
+Parent Evaluation Unit,Parent Evaluation Unit
+Criterion Name,Criterion Name
+Criterion Type,Criterion Type
+Applies To,Applies To
+Weight,Weight
+Max Value,Max Value
+Is Active,Is Active
+Formula Expression,Formula Expression
+Weighted Score,Weighted Score
+Value,Value
+Total Score,Total Score
+Rank,Rank
+Score Card Title,Score Card Title
+Subject Type,Subject Type
+Period From,Period From
+Period To,Period To
+Criteria Group,Criteria Group
+Score Lines,Score Lines
+Group Name,Group Name
+Criteria,Criteria
+Posture Name,Posture Name
+Posture Name (Arabic),Posture Name (Arabic)
+Affects Readiness,Affects Readiness
+Readiness Modifier,Readiness Modifier
+Map Color,Map Color
+Symbol Code,Symbol Code
+Sort Order,Sort Order
+Report Datetime,Report Datetime
+Observed Sector,Observed Sector
+Overall Status,Overall Status
+Enemy Summary,Enemy Summary
+Collection Notes,Collection Notes
+Weather,Weather
+Snapshot Lines,Snapshot Lines
+Linked Activities,Linked Activities
+Target Name,Target Name
+Target Number,Target Number
+Latitude,Latitude
+Longitude,Longitude
+MGRS,MGRS
+Elevation,Elevation
+Directorate,Directorate
+Priority Score,Priority Score
+Collateral Risk,Collateral Risk
+Recommended Fire,Recommended Fire
+Restrike Recommended,Restrike Recommended
+No Strike,No Strike
+Valid From,Valid From
+Valid Until,Valid Until
+CARVER Lines,CARVER Lines
+BDA Lines,BDA Lines
+Status Log,Status Log
+Source,Source
+Assigned Unit,Assigned Unit
+Location,Location
+Location on Map,Location on Map
+Person Full Name,Person Full Name
+First Name,First Name
+Middle Name,Middle Name
+Last Name,Last Name
+Full Name,Full Name
+Date of Birth,Date of Birth
+Date of Joining,Date of Joining
+Rank Name,Rank Name
+Military Rank Name,Military Rank Name
+Mobile,Mobile
+Personal Email,Personal Email
+Current Address,Current Address
+Permanent Address,Permanent Address
+Blood Group,Blood Group
+Marital Status,Marital Status
+Passport Number,Passport Number
+Image,Image
+Direct Supervisor,Direct Supervisor
+Military Division,Military Division
+Designation,Designation
+Financial Number,Financial Number
+Personality Number,Personality Number
+Education,Education
+External Work History,External Work History
+Dependents,Dependents
+Offensive,Offensive
+Defensive,Defensive
+Transition,Transition
+Stabilization,Stabilization
+Planned,Planned
+Completed,Completed
+Deferred,Deferred
+Attack,Attack
+Defend,Defend
+Delay,Delay
+Withdraw,Withdraw
+Reserve,Reserve
+Reorganize,Reorganize
+Consolidate,Consolidate
+Ambush,Ambush
+Screen,Screen
+Guard,Guard
+Unlocated,Unlocated
+Equipment,Equipment
+General,General
+Combat,Combat
+Spiritual,Spiritual
+Other,Other
+Geographic,Geographic
+Tactic,Tactic
+Management,Management
+Numeric,Numeric
+Boolean,Boolean
+Percentage,Percentage
+Formula,Formula
+HUMINT,HUMINT
+SIGINT,SIGINT
+IMINT,IMINT
+OSINT,OSINT
+Field Recon,Field Recon
+Quiet,Quiet
+Limited Contact,Limited Contact
+Heavy Contact,Heavy Contact
+No Damage,No Damage
+Light,Light
+Moderate,Moderate
+Severe,Severe
+Destroyed,Destroyed
+Full,Full
+Degraded,Degraded
+Enhanced,Enhanced
+Reduced,Reduced
+Normal,Normal
+Green,Green
+Yellow,Yellow
+Red,Red
+Main,Main
+Support,Support
+Destroy,Destroy
+Neutralize,Neutralize
+Disrupt,Disrupt
+Deceive,Deceive
+Not Started,Not Started
+In Progress,In Progress
+Stalled,Stalled
+OPCON,OPCON
+TACON,TACON
+Criticality,Criticality
+Accessibility,Accessibility
+Recuperability,Recuperability
+Vulnerability,Vulnerability
+Effect,Effect
+Recognizability,Recognizability
+Out of Contact,Out of Contact
+In Contact,In Contact
+Encircled,Encircled
+Surrounded,Surrounded
+km,km
+day,day
+days,days
+Record in use,Record in use
+Duplicate observation,Duplicate observation
+Invalid supervisor,Invalid supervisor
+No-strike target,No-strike target

@@ -1,0 +1,76 @@
+{
+ "description": "مساحة عمل محرك معالجة الأنشطة — استخراج الكيانات من الأنشطة اليومية وتغذية السجلات المركزية",
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "gears",
+ "is_hidden": 0,
+ "label": "المحرك المعالج للأنشطة",
+ "link": "/app/activity-processing-engine",
+ "module": "Activity Processing Engine",
+ "name": "Activity Processing Engine",
+ "public": 1,
+ "quick_links": [],
+ "show_sidebar": 1,
+ "sort_order": 10,
+ "title": "المحرك المعالج للأنشطة",
+ "type": "Link",
+ "links": [
+  {
+   "dependencies": null,
+   "group": null,
+   "label": "قائمة المراجعة (بيانات معلق)",
+   "link_doctype": "Data Review Queue",
+   "link_type": "DocType",
+   "only_for": null,
+   "onboard": 0
+  },
+  {
+   "dependencies": null,
+   "group": null,
+   "label": "قرارات المراجعة",
+   "link_doctype": "Data Review Decision",
+   "link_type": "DocType",
+   "only_for": null,
+   "onboard": 0
+  },
+  {
+   "dependencies": null,
+   "group": null,
+   "label": "سجل التغييرات",
+   "link_doctype": "Data Change Log",
+   "link_type": "DocType",
+   "only_for": null,
+   "onboard": 0
+  },
+  {
+   "dependencies": null,
+   "group": null,
+   "label": "مرشحات المطابقة",
+   "link_doctype": "Entity Match Candidate",
+   "link_type": "DocType",
+   "only_for": null,
+   "onboard": 0
+  },
+  {
+   "dependencies": null,
+   "group": null,
+   "label": "تقرير كيانات النشاط",
+   "link_doctype": "Activity Intelligence Report",
+   "link_type": "Report",
+   "only_for": null,
+   "onboard": 0
+  },
+  {
+   "dependencies": null,
+   "group": null,
+   "label": "تقرير قائمة المراجعة",
+   "link_doctype": "Data Review Queue Report",
+   "link_type": "Report",
+   "only_for": null,
+   "onboard": 0
+  }
+ ],
+ "cards": [],
+ "charts": []
+}

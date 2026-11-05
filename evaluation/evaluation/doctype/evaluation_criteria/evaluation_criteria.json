@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:criterion_name",
+ "creation": "2026-08-03 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "criterion_name",
+  "criterion_type",
+  "applies_to",
+  "column_break_1",
+  "weight",
+  "max_value",
+  "is_active",
+  "section_break_1",
+  "description",
+  "formula_expression"
+ ],
+ "fields": [
+  {
+   "fieldname": "criterion_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Criterion Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "Numeric",
+   "fieldname": "criterion_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Criterion Type",
+   "options": "Numeric\nBoolean\nPercentage\nFormula",
+   "reqd": 1
+  },
+  {
+   "default": "Personality",
+   "fieldname": "applies_to",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Applies To",
+   "options": "Personality\nEvaluation Unit\nArmy Chief\nForce Arrangement\nDaily Activities",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Weight",
+   "reqd": 1
+  },
+  {
+   "default": "100",
+   "fieldname": "max_value",
+   "fieldtype": "Float",
+   "label": "Max Value (normalization)"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "depends_on": "eval:doc.criterion_type=='Formula'",
+   "description": "Uses value (the entered score) and max_value. Example: min(value * 1.2, max_value). Result is 0–100.",
+   "fieldname": "formula_expression",
+   "fieldtype": "Data",
+   "label": "Formula Expression"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-03 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Evaluation",
+ "name": "Evaluation Criteria",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation User"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "criterion_name",
+ "track_changes": 1
+}

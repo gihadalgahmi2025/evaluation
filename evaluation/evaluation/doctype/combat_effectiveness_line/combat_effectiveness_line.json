@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-23 14:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "combat_effectiveness_type",
+  "factor_name",
+  "factor_group",
+  "value",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "combat_effectiveness_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Combat Effectiveness Type",
+   "options": "Combat Effectiveness Type"
+  },
+  {
+   "fieldname": "factor_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Factor Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "factor_group",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Factor Group",
+   "options": "\nCombat\nSpiritual\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Value"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-06-04 01:01:44.529409",
+ "modified_by": "Administrator",
+ "module": "Evaluation",
+ "name": "Combat Effectiveness Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

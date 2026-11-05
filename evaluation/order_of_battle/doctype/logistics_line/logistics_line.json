@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "creation": "2026-07-03 00:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "supply_class",
+  "on_hand",
+  "critical_level",
+  "days_of_supply",
+  "status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "supply_class",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Supply Class",
+   "options": "Supply Class"
+  },
+  {
+   "fieldname": "on_hand",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "On Hand"
+  },
+  {
+   "fieldname": "critical_level",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Critical Level"
+  },
+  {
+   "fieldname": "days_of_supply",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Days of Supply"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nGreen\nYellow\nRed"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "istable": 1,
+ "modified": "2026-07-03 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Order Of Battle",
+ "name": "Logistics Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

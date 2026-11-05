@@ -1,0 +1,34 @@
+{
+ "add_total_row": 0,
+ "creation": "2026-11-04 00:00:00.000000",
+ "description": "تقرير الذكاء التشغيلي — عرض الكيانات المستخرجة من الأنشطة اليومية وحالتها",
+ "disable_prepared_report": 1,
+ "docstatus": 0,
+ "doctype": "Report",
+ "idx": 0,
+ "is_standard": "Yes",
+ "module": "Activity Processing Engine",
+ "name": "Activity Intelligence Report",
+ "owner": "Administrator",
+ "query": "SELECT da.name AS activity, da.start_of_event AS date, da.military_division AS unit, da.entity_extraction_done AS extracted, da.extraction_summary AS summary, da.workflow_state AS status FROM `tabDaily Activities` da ORDER BY da.start_of_event DESC LIMIT 500",
+ "ref_report_doctype": "",
+ "report_name": "Activity Intelligence Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Evaluation Manager"
+  },
+  {
+   "role": "Evaluation User"
+  },
+  {
+   "role": "Evaluation Intel Officer"
+  },
+  {
+   "role": "Evaluation Commander"
+  }
+ ]
+}
