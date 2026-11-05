@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:ESC-{#####}",
  "creation": "2026-08-03 00:00:00",
@@ -43,7 +44,8 @@
    "in_list_view": 1,
    "label": "Evaluation Unit",
    "options": "Evaluation Unit",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "default": "Personality",
@@ -63,7 +65,8 @@
    "fieldname": "personality",
    "fieldtype": "Link",
    "label": "Personality",
-   "options": "Personality"
+   "options": "Personality",
+   "search_index": 1
   },
   {
    "depends_on": "eval:doc.subject_type=='Army Chief'",
@@ -77,7 +80,8 @@
    "fieldname": "force_arrangement",
    "fieldtype": "Link",
    "label": "Force Arrangement",
-   "options": "Force Arrangement"
+   "options": "Force Arrangement",
+   "search_index": 1
   },
   {
    "fieldname": "column_break_1",
@@ -148,7 +152,7 @@
  "modified_by": "Administrator",
  "module": "Evaluation",
  "name": "Evaluation Score Card",
- "naming_rule": "Expression (old style)",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "creation": "2026-07-03 00:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "casualty_type",
+  "count",
+  "personality",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "casualty_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "\nKIA\nWIA\nMIA\nPOW",
+   "reqd": 1
+  },
+  {
+   "fieldname": "count",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Count",
+   "reqd": 1
+  },
+  {
+   "fieldname": "personality",
+   "fieldtype": "Link",
+   "label": "Personality",
+   "options": "Personality",
+   "search_index": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "istable": 1,
+ "modified": "2026-07-03 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Operations",
+ "name": "Casualty Personnel Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

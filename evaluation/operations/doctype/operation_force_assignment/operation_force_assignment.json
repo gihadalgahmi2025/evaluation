@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "creation": "2026-07-03 00:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "force_arrangement",
+  "role",
+  "command_relationship",
+  "commitment_pct"
+ ],
+ "fields": [
+  {
+   "fieldname": "force_arrangement",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Enemy Unit",
+   "options": "Force Arrangement",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Role",
+   "options": "\nMain\nSupport\nReserve"
+  },
+  {
+   "fieldname": "command_relationship",
+   "fieldtype": "Select",
+   "label": "Command Relationship",
+   "options": "\nOPCON\nTACON\nSupport"
+  },
+  {
+   "fieldname": "commitment_pct",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Commitment %"
+  }
+ ],
+ "istable": 1,
+ "modified": "2026-08-26 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Operations",
+ "name": "Operation Force Assignment",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

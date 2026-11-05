@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "creation": "2026-07-03 00:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "force_arrangement",
+  "posture",
+  "readiness_snapshot",
+  "latitude",
+  "longitude",
+  "strength_pct",
+  "contact_status",
+  "notes",
+  "previous_posture"
+ ],
+ "fields": [
+  {
+   "fieldname": "force_arrangement",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Observed Enemy Unit",
+   "options": "Force Arrangement",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "posture",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Posture",
+   "options": "Combat Posture",
+   "search_index": 1
+  },
+  {
+   "fieldname": "readiness_snapshot",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Readiness Snapshot",
+   "read_only": 1
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude"
+  },
+  {
+   "fieldname": "strength_pct",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Strength %"
+  },
+  {
+   "fieldname": "contact_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Contact Status",
+   "options": "\nOut of Contact\nIn Contact\nEncircled\nSurrounded"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "previous_posture",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Previous Posture",
+   "options": "Combat Posture",
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2026-08-26 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Operations",
+ "name": "Situation Snapshot Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

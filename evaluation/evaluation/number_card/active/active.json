@@ -1,0 +1,23 @@
+{
+ "aggregate_function_based_on": "",
+ "creation": "2026-11-05 06:13:13.699395",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Personality",
+ "filters_json": "[[\"Personality\", \"status\", \"=\", \"Active\"]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Active",
+ "modified": "2026-11-05 06:29:22.455376",
+ "modified_by": "Administrator",
+ "module": "Evaluation",
+ "name": "Active",
+ "owner": "Administrator",
+ "report_function": "Sum",
+ "show_full_number": 0,
+ "show_percentage_stats": 0,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}

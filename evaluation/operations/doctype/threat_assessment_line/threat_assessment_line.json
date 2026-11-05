@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "creation": "2026-07-03 00:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "threat_factor",
+  "capability",
+  "intent",
+  "opportunity",
+  "threat_score",
+  "affected_unit"
+ ],
+ "fields": [
+  {
+   "fieldname": "threat_factor",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Threat Factor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "capability",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Capability (1-5)"
+  },
+  {
+   "fieldname": "intent",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Intent (1-5)"
+  },
+  {
+   "fieldname": "opportunity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Opportunity (1-5)"
+  },
+  {
+   "fieldname": "threat_score",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Threat Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "affected_unit",
+   "fieldtype": "Link",
+   "label": "Affected Unit",
+   "options": "Force Arrangement",
+   "search_index": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2026-07-03 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Operations",
+ "name": "Threat Assessment Line",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

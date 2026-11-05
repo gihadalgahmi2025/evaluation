@@ -1,0 +1,12 @@
+{
+  "name": "evaluation",
+  "version": "0.1.0",
+  "description": "Enemy reconnaissance: order of battle, daily observations, targets, and situation",
+  "private": true,
+  "scripts": {
+    "build": "cd ../frappe && node esbuild --production --apps evaluation",
+    "watch": "cd ../frappe && node esbuild --watch --apps evaluation"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

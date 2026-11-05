@@ -1,0 +1,47 @@
+{
+ "actions": [],
+ "creation": "2026-07-03 00:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "target",
+  "desired_effect",
+  "priority"
+ ],
+ "fields": [
+  {
+   "fieldname": "target",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Target",
+   "options": "Target",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "desired_effect",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Desired Effect",
+   "options": "\nDestroy\nNeutralize\nDisrupt\nDeceive"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "\nCritical\nHigh\nMedium\nLow"
+  }
+ ],
+ "istable": 1,
+ "modified": "2026-07-03 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Operations",
+ "name": "Operation Target Link",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

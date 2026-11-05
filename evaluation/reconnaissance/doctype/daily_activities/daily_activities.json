@@ -1,0 +1,535 @@
+{
+ "actions": [],
+ "allow_amend": 1,
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-05-06 19:09:48.125667",
+ "default_view": "List",
+ "description": "Enemy observation report. Submitting updates observed enemy units, intel, targets, and situation from this record.",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_bzunl",
+  "naming_series",
+  "activity_side",
+  "evaluation_unit",
+  "date",
+  "column_break_pbqfm",
+  "activity_worker",
+  "today",
+  "column_break_srqz",
+  "activity_reporter",
+  "start_of_event",
+  "column_break_gmgf",
+  "creator_of_the_report",
+  "text_and_note_section",
+  "the_topic",
+  "notes",
+  "column_break_uwcne",
+  "text_summary",
+  "text",
+  "detailed_classifications_section",
+  "public_activity",
+  "column_break_xky5l",
+  "military_division",
+  "column_break_xchy",
+  "military_divisions_name",
+  "section_break_zduu",
+  "augmentation_and_reduction_div",
+  "amended_from",
+  "workflow_state",
+  "readiness_changes_section",
+  "readiness_changes",
+  "spread_changes_section",
+  "spread_map",
+  "spread_changes",
+  "c2_links_section",
+  "operation_order",
+  "column_break_c2l1",
+  "operation_task",
+  "column_break_c2l2",
+  "linked_target",
+  "situation_report",
+  "generates_intel",
+  "generates_target",
+  "inferred_posture",
+  "auto_intel_report",
+  "operation_task_links",
+  "geographic_dependency",
+  "governorate_name",
+  "column_break_txcb",
+  "directorate_name",
+  "column_break_ryvq",
+  "insulation_name",
+  "insulation"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_bzunl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "DA-ACTIV.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "no_copy": 1,
+   "options": "DA-ACTIV.-.#####",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "activity_side",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Collection Side",
+   "options": "Activity Side",
+   "reqd": 1
+  },
+  {
+   "fieldname": "evaluation_unit",
+   "fieldtype": "Link",
+   "in_list_view": 0,
+   "in_standard_filter": 1,
+   "label": "Evaluation Unit",
+   "options": "Evaluation Unit",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Datetime",
+   "label": "Date and Time of Registration",
+   "no_copy": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_pbqfm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "activity_worker",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Observer",
+   "options": "Activity Worker"
+  },
+  {
+   "description": "Filled automatically from the observation date.",
+   "fieldname": "today",
+   "fieldtype": "Select",
+   "label": "Weekday",
+   "options": "Saturday\nSunday\nMonday\nTuesday\nWednesday\nThursday\nFriday",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_srqz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "activity_reporter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Reporting Source",
+   "options": "Activity Reporter"
+  },
+  {
+   "fieldname": "start_of_event",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Observation Date"
+  },
+  {
+   "fieldname": "column_break_gmgf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "creator_of_the_report",
+   "fieldtype": "Data",
+   "label": "Creator of the report",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "text_and_note_section",
+   "fieldtype": "Section Break",
+   "label": "Text and Notes"
+  },
+  {
+   "fieldname": "the_topic",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Observation Topic",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "column_break_uwcne",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "text_summary",
+   "fieldtype": "Small Text",
+   "label": "Additional details"
+  },
+  {
+   "fieldname": "text",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Text"
+  },
+  {
+   "fieldname": "detailed_classifications_section",
+   "fieldtype": "Section Break",
+   "label": "Detailed Classifications"
+  },
+  {
+   "fieldname": "public_activity",
+   "fieldtype": "Link",
+   "label": "Observed Activity Type",
+   "options": "Public Activity"
+  },
+  {
+   "fieldname": "column_break_xky5l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "military_division",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Observed Enemy Unit",
+   "options": "Force Arrangement",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_xchy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "military_divisions_name",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Military Divisions Name",
+   "options": "Military Divisions"
+  },
+  {
+   "fieldname": "readiness_changes_section",
+   "fieldtype": "Section Break",
+   "label": "Readiness Changes"
+  },
+  {
+   "fieldname": "readiness_changes",
+   "fieldtype": "Table",
+   "label": "Readiness Changes",
+   "options": "Daily Activity Readiness Line"
+  },
+  {
+   "fieldname": "spread_changes_section",
+   "fieldtype": "Section Break",
+   "label": "Spread Changes"
+  },
+  {
+   "description": "Click the map to add a spread point and a table row. Delete a marker or a row to update both.",
+   "fieldname": "spread_map",
+   "fieldtype": "Geolocation",
+   "label": "Spread Map"
+  },
+  {
+   "fieldname": "spread_changes",
+   "fieldtype": "Table",
+   "label": "Spread Changes",
+   "options": "Daily Activity Spread Line"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "c2_links_section",
+   "fieldtype": "Section Break",
+   "label": "Intelligence Links"
+  },
+  {
+   "fieldname": "operation_order",
+   "fieldtype": "Link",
+   "label": "Observed Enemy Operation",
+   "options": "Operation Order",
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_c2l1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "operation_order",
+   "description": "Filled when you link a task from the observed operation. Use Load tasks from operation.",
+   "fieldname": "operation_task",
+   "fieldtype": "Data",
+   "label": "Operation Task Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_c2l2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "linked_target",
+   "fieldtype": "Link",
+   "label": "Linked Target",
+   "options": "Target",
+   "search_index": 1
+  },
+  {
+   "fieldname": "situation_report",
+   "fieldtype": "Link",
+   "label": "Situation Report",
+   "options": "Situation Report",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "generates_intel",
+   "fieldtype": "Check",
+   "label": "Create Intel Report"
+  },
+  {
+   "default": "0",
+   "fieldname": "generates_target",
+   "fieldtype": "Check",
+   "label": "Nominate Target"
+  },
+  {
+   "fieldname": "inferred_posture",
+   "fieldtype": "Link",
+   "label": "Inferred Posture",
+   "options": "Combat Posture",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "auto_intel_report",
+   "fieldtype": "Link",
+   "label": "Auto Intel Report",
+   "options": "Intel Report",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "operation_task_links",
+   "fieldtype": "Table",
+   "label": "Operation Task Links",
+   "options": "Daily Activity Task Link"
+  },
+  {
+   "fieldname": "geographic_dependency",
+   "fieldtype": "Section Break",
+   "label": "Geographic Dependency"
+  },
+  {
+   "fetch_from": "directorate_name.governorate_name",
+   "fieldname": "governorate_name",
+   "fieldtype": "Link",
+   "label": "Governorate Name",
+   "options": "Governorate",
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_txcb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "insulation.directorate_name",
+   "fieldname": "directorate_name",
+   "fieldtype": "Link",
+   "label": "Directorate Name",
+   "options": "Governorate Directorate",
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_ryvq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "insulation.insulation",
+   "fieldname": "insulation_name",
+   "fieldtype": "Data",
+   "label": "Insulation Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "insulation",
+   "fieldtype": "Link",
+   "label": "Insulation",
+   "options": "Insulation",
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_zduu",
+   "fieldtype": "Section Break",
+   "label": "Getting Ready"
+  },
+  {
+   "fieldname": "augmentation_and_reduction_div",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Observed Strength Change",
+   "options": "\nEnhanced\nReduced\nNormal"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Daily Activities",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Workflow State",
+   "no_copy": 1,
+   "options": "Workflow State",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "group": "Intelligence",
+   "link_doctype": "Intel Report",
+   "link_fieldname": "source_daily_activity"
+  },
+  {
+   "group": "Forces",
+   "link_doctype": "Enemy Order of Battle",
+   "link_fieldname": "last_daily_activity"
+  },
+  {
+   "group": "Situation Reports",
+   "is_child_table": 1,
+   "link_doctype": "Daily Activities",
+   "link_fieldname": "daily_activity",
+   "parent_doctype": "Situation Report",
+   "table_fieldname": "linked_activities"
+  }
+ ],
+ "modified": "2026-08-27 16:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Reconnaissance",
+ "name": "Daily Activities",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Intel Officer",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Gray",
+   "title": "Draft"
+  },
+  {
+   "color": "Orange",
+   "title": "Pending Review"
+  },
+  {
+   "color": "Green",
+   "title": "Approved"
+  },
+  {
+   "color": "Red",
+   "title": "Rejected"
+  }
+ ],
+ "title_field": "the_topic",
+ "track_changes": 1,
+ "track_seen": 1
+}

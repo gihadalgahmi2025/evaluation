@@ -1,0 +1,36 @@
+{
+ "attach_files": "",
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition": "",
+ "condition_type": "Python",
+ "creation": "2026-11-05 06:20:34.161051",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Intel Report",
+ "enabled": 1,
+ "event": "Submit",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "\n\t\t\t<p>{{ doc.subject }}</p>\n\t\t\t<p>Source: {{ doc.source_type }} ({{ doc.reliability }}{{ doc.credibility }})</p>\n\t\t\t<p><a href=\"/app/intel-report/{{ doc.name }}\">Open report</a></p>\n\t\t",
+ "message_type": "Markdown",
+ "minutes_offset": 0,
+ "modified": "2026-11-05 06:20:34.161051",
+ "modified_by": "Administrator",
+ "module": "Evaluation",
+ "name": "Intel Report Submitted",
+ "notification_type": "Alert",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "Evaluation Intel Officer"
+  },
+  {
+   "receiver_by_role": "Evaluation Manager"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "subject": "Intel report {{ doc.name }} submitted"
+}

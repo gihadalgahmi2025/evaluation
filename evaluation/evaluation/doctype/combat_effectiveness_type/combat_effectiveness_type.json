@@ -103,5 +103,6 @@
  "quick_entry": 1,
  "sort_field": "sort_order",
  "sort_order": "ASC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

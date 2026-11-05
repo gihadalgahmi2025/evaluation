@@ -1,0 +1,34 @@
+{
+ "attach_files": "",
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition": "doc.status == \"Approved\"",
+ "condition_type": "Python",
+ "creation": "2026-11-05 06:20:34.202175",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Evaluation Score Card",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "\n\t\t\t<p>{{ doc.score_card_title }} - total score <b>{{ doc.total_score }}</b></p>\n\t\t\t<p>Rank: {{ doc.rank }}</p>\n\t\t",
+ "message_type": "Markdown",
+ "minutes_offset": 0,
+ "modified": "2026-11-05 06:20:34.202175",
+ "modified_by": "Administrator",
+ "module": "Evaluation",
+ "name": "Score Card Approved",
+ "notification_type": "Alert",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "Evaluation Manager"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "subject": "Score card {{ doc.name }} approved",
+ "value_changed": "status"
+}

@@ -1,20 +1,43 @@
 {
  "actions": [],
+ "autoname": "field:factor",
  "creation": "2026-07-03 00:00:00",
  "doctype": "DocType",
  "engine": "InnoDB",
+ "field_order": [
+  "factor",
+  "weight",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "factor",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Factor",
+   "options": "\nreadiness\nlogistics\nammunition\nstrength",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Weight",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "modified": "2026-07-03 00:00:00",
+ "modified_by": "Administrator",
  "module": "Evaluation",
  "name": "Combat Power Weight",
- "owner": "Administrator",
- "modified_by": "Administrator",
- "modified": "2026-07-03 00:00:00",
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": [],
- "track_changes": 1,
- "autoname": "field:factor",
- "title_field": "factor",
  "naming_rule": "By fieldname",
+ "owner": "Administrator",
  "permissions": [
   {
    "create": 1,
@@ -61,32 +84,9 @@
    "share": 1
   }
  ],
- "field_order": [
-  "factor",
-  "weight",
-  "description"
- ],
- "fields": [
-  {
-   "fieldname": "factor",
-   "fieldtype": "Select",
-   "label": "Factor",
-   "reqd": 1,
-   "unique": 1,
-   "options": "\nreadiness\nlogistics\nammunition\nstrength",
-   "in_list_view": 1
-  },
-  {
-   "fieldname": "weight",
-   "fieldtype": "Float",
-   "label": "Weight",
-   "reqd": 1,
-   "in_list_view": 1
-  },
-  {
-   "fieldname": "description",
-   "fieldtype": "Small Text",
-   "label": "Description"
-  }
- ]
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "factor",
+ "track_changes": 1
 }

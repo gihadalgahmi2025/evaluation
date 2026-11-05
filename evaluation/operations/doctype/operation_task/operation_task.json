@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "creation": "2026-07-03 00:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "task_code",
+  "task_description",
+  "assigned_unit",
+  "task_type",
+  "priority",
+  "start_datetime",
+  "due_datetime",
+  "progress",
+  "status",
+  "depends_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "task_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Task Code"
+  },
+  {
+   "fieldname": "task_description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Task Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "assigned_unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assigned Unit",
+   "options": "Force Arrangement",
+   "search_index": 1
+  },
+  {
+   "fieldname": "task_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Task Type",
+   "options": "\nAttack\nSeize\nSupport\nSecure\nReserve\nReconnaissance"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "\nCritical\nHigh\nMedium\nLow"
+  },
+  {
+   "fieldname": "start_datetime",
+   "fieldtype": "Datetime",
+   "label": "Start",
+   "search_index": 1
+  },
+  {
+   "fieldname": "due_datetime",
+   "fieldtype": "Datetime",
+   "label": "Due"
+  },
+  {
+   "fieldname": "progress",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Progress"
+  },
+  {
+   "default": "Not Started",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nNot Started\nIn Progress\nCompleted\nStalled\nCancelled"
+  },
+  {
+   "fieldname": "depends_on",
+   "fieldtype": "Data",
+   "label": "Depends On Task Code"
+  }
+ ],
+ "istable": 1,
+ "modified": "2026-07-03 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Operations",
+ "name": "Operation Task",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
