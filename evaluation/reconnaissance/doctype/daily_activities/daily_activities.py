@@ -23,10 +23,13 @@ from frappe.utils import cint, cstr, flt, getdate, now_datetime, nowdate
 
 from evaluation.utils import CONFIDENCE_LEVELS
 
+<<<<<<< HEAD
 from evaluation.activity_processing_engine import (
     process_activity,
 )
 
+=======
+>>>>>>> 85cd41117af485253bdbeafd604792de43fd6470
 
 class DailyActivities(Document):
 	def validate(self):
@@ -126,12 +129,15 @@ def after_submit_activity(doc, method=None):
 	"""Fan-out: update the unit, raise intel / targets."""
 	update_observed_unit(doc)
 
+<<<<<<< HEAD
 	# --- Activity Processing Engine: extract entities and queue for review ---
 	try:
 		process_activity(doc)
 	except Exception as exc:
 		frappe.log_error(f"Activity Processing Engine failed for {doc.name}: {exc}", "Evaluation Engine")
 
+=======
+>>>>>>> 85cd41117af485253bdbeafd604792de43fd6470
 	if cint(doc.generates_intel):
 		report = doc.auto_intel_report
 		if not report or not frappe.db.exists("Intel Report", report):

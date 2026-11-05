@@ -118,6 +118,7 @@ CUSTOM_FIELDS = [
 		"insert_after": "folder",
 		"read_only": 1,
 	},
+<<<<<<< HEAD
 	# --- Activity Processing Engine custom fields ---
 	{
 		"dt": "Daily Activities",
@@ -160,6 +161,8 @@ CUSTOM_FIELDS = [
 		"insert_after": "extraction_confidence",
 		"default": "Unverified",
 	},
+=======
+>>>>>>> 85cd41117af485253bdbeafd604792de43fd6470
 ]
 
 

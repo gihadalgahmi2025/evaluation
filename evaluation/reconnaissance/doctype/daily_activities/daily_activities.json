@@ -286,8 +286,14 @@
   },
   {
    "fieldname": "linked_target",
+<<<<<<< HEAD
    "fieldtype": "Data",
    "label": "Linked Target",
+=======
+   "fieldtype": "Link",
+   "label": "Linked Target",
+   "options": "Target",
+>>>>>>> 85cd41117af485253bdbeafd604792de43fd6470
    "search_index": 1
   },
   {
