@@ -37,7 +37,7 @@
    "fieldname": "linked_activity",
    "fieldtype": "Link",
    "label": "Linked Activity",
-   "options": "Daily Activities",
+   "options": "Linked Activities",
    "search_index": 1
   },
   {

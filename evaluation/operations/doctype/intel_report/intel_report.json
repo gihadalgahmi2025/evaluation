@@ -154,7 +154,7 @@
    "fieldname": "source_daily_activity",
    "fieldtype": "Link",
    "label": "Source Daily Activity",
-   "options": "Daily Activities",
+   "options": "Linked Activities",
    "read_only": 1,
    "search_index": 1
   },

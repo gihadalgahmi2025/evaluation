@@ -286,14 +286,8 @@
   },
   {
    "fieldname": "linked_target",
-<<<<<<< HEAD
    "fieldtype": "Data",
    "label": "Linked Target",
-=======
-   "fieldtype": "Link",
-   "label": "Linked Target",
-   "options": "Target",
->>>>>>> 85cd41117af485253bdbeafd604792de43fd6470
    "search_index": 1
   },
   {
@@ -399,7 +393,7 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Daily Activities",
+   "options": "Linked Activities",
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1

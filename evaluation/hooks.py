@@ -158,21 +158,12 @@ fixtures = [
 		"Situation Report", "Casualty Report", "Threat Assessment"]]]},
 	{"dt": "Workflow State"},
 	{"dt": "Workflow Action Master"},
-<<<<<<< HEAD
 	{"dt": "Notification", "filters": [["module", "in", ["Evaluation", "Activity Processing Engine", "Data Review Center"]]]},
 	{"dt": "Dashboard", "filters": [["module", "in", ["Evaluation", "Activity Processing Engine", "Data Review Center"]]]},
 	{"dt": "Dashboard Chart", "filters": [["module", "in", ["Evaluation", "Activity Processing Engine", "Data Review Center"]]]},
 	{"dt": "Number Card", "filters": [["module", "in", ["Evaluation", "Activity Processing Engine", "Data Review Center"]]]},
 	{"dt": "Report", "filters": [["module", "in", ["Evaluation", "Activity Processing Engine", "Data Review Center"]], ["is_standard", "=", "Yes"]]},
 	{"dt": "Print Format", "filters": [["module", "in", ["Evaluation", "Activity Processing Engine", "Data Review Center"]]]},
-=======
-	{"dt": "Notification", "filters": [["module", "=", "Evaluation"]]},
-	{"dt": "Dashboard", "filters": [["module", "=", "Evaluation"]]},
-	{"dt": "Dashboard Chart", "filters": [["module", "=", "Evaluation"]]},
-	{"dt": "Number Card", "filters": [["module", "=", "Evaluation"]]},
-	{"dt": "Report", "filters": [["module", "=", "Evaluation"], ["is_standard", "=", "Yes"]]},
-	{"dt": "Print Format", "filters": [["module", "=", "Evaluation"]]},
->>>>>>> 85cd41117af485253bdbeafd604792de43fd6470
 ]
 
 # ---------------------------------------------------------------------------

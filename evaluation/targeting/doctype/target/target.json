@@ -1,0 +1,258 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-11-04 00:00:00.000000",
+ "description": "Enemy target with CARVER analysis and BDA assessment. Subject to approval workflow.",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "target_name",
+  "target_category",
+  "target_type",
+  "is_tst",
+  "column_break_target",
+  "geolocation",
+  "latitude",
+  "longitude",
+  "mgrs",
+  "section_break_analysis",
+  "priority_score",
+  "priority_range",
+  "confidence",
+  "source_reliability",
+  "intel_source",
+  "section_break_carver",
+  "carver_lines",
+  "section_break_bda",
+  "bda_lines",
+  "section_break_status",
+  "status_log",
+  "workflow_state",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "TGT-.YYYY.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Series",
+   "options": "TGT-.YYYY.#####"
+  },
+  {
+   "fieldname": "target_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Target Name",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "target_category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Target Category",
+   "options": "Target Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Target Type",
+   "options": "Target Type",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_tst",
+   "fieldtype": "Check",
+   "label": "Time Sensitive Target (TST)"
+  },
+  {
+   "fieldname": "geolocation",
+   "fieldtype": "Link",
+   "label": "Geolocation",
+   "options": "Geolocation"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Data",
+   "label": "Latitude"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Data",
+   "label": "Longitude"
+  },
+  {
+   "fieldname": "mgrs",
+   "fieldtype": "Data",
+   "label": "MGRS Coordinates"
+  },
+  {
+   "fieldname": "priority_score",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Priority Score",
+   "read_only": 1
+  },
+  {
+   "fieldname": "priority_range",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Priority Range",
+   "options": "\nLow\nMedium\nHigh\nCritical",
+   "read_only": 1
+  },
+  {
+   "fieldname": "confidence",
+   "fieldtype": "Select",
+   "label": "Confidence Level",
+   "options": "\nHigh\nMedium\nLow"
+  },
+  {
+   "fieldname": "source_reliability",
+   "fieldtype": "Select",
+   "label": "Source Reliability",
+   "options": "\nA\nB\nC\nD\nE\nF"
+  },
+  {
+   "fieldname": "intel_source",
+   "fieldtype": "Link",
+   "label": "Intelligence Source",
+   "options": "Intel Report"
+  },
+  {
+   "fieldname": "carver_lines",
+   "fieldtype": "Table",
+   "label": "CARVER Analysis Lines",
+   "options": "Target Carver Line"
+  },
+  {
+   "fieldname": "bda_lines",
+   "fieldtype": "Table",
+   "label": "BDA Assessment Lines",
+   "options": "Target Bda Line"
+  },
+  {
+   "fieldname": "status_log",
+   "fieldtype": "Table",
+   "label": "Status Change Log",
+   "options": "Target Status Log",
+   "read_only": 1
+  },
+  {
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "label": "Workflow State",
+   "options": "Workflow State",
+   "read_only": 1,
+   "hidden": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Target",
+   "read_only": 1,
+   "hidden": 1
+  }
+ ],
+ "istable": 0,
+ "links": [
+  {
+   "group": "Targets",
+   "link_doctype": "Target",
+   "link_fieldname": "target_name"
+  }
+ ],
+ "modified": "2026-11-04 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Targeting",
+ "name": "Target",
+ "naming_rule": "By naming series",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Intel Officer",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Fires Officer",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Evaluation Commander",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "row_format": "Dynamic",
+ "search_fields": "target_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "target_name",
+ "track_changes": 1
+}
